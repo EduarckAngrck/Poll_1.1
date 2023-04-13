@@ -40,7 +40,6 @@ public class Pool_Menu extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -52,7 +51,6 @@ public class Pool_Menu extends javax.swing.JFrame {
         m4 = new javax.swing.JButton();
         m3 = new javax.swing.JButton();
         mes3 = new javax.swing.JButton();
-        mes4 = new javax.swing.JButton();
         mes6 = new javax.swing.JButton();
         mes7 = new javax.swing.JButton();
         mes8 = new javax.swing.JButton();
@@ -126,10 +124,6 @@ public class Pool_Menu extends javax.swing.JFrame {
         jLabel14.setText("Mesa 14");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 430, 80, 30));
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel15.setText("Mesa 16");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 430, 80, 30));
-
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel17.setText("AJUSTES ");
         getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 90, 30));
@@ -200,17 +194,6 @@ public class Pool_Menu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(mes3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 290, -1, 80));
-
-        mes4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/m1.jpeg"))); // NOI18N
-        mes4.setBorder(null);
-        mes4.setBorderPainted(false);
-        mes4.setContentAreaFilled(false);
-        mes4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mes4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(mes4, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 410, -1, 80));
 
         mes6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/m2.jpeg"))); // NOI18N
         mes6.setBorder(null);
@@ -303,10 +286,6 @@ public class Pool_Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_mes3ActionPerformed
 
-    private void mes4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mes4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mes4ActionPerformed
-
     private void mes5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mes5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_mes5ActionPerformed
@@ -358,7 +337,6 @@ public class Pool_Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -385,7 +363,6 @@ public class Pool_Menu extends javax.swing.JFrame {
     private javax.swing.JButton mes10;
     private javax.swing.JButton mes2;
     private javax.swing.JButton mes3;
-    private javax.swing.JButton mes4;
     private javax.swing.JButton mes5;
     private javax.swing.JButton mes6;
     private javax.swing.JButton mes7;
