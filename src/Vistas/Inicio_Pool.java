@@ -93,6 +93,7 @@ men_1 men = new men_1();
 men.setVisible(true);
 //poll.setVisible(true);
 this.setVisible(false);
+// hola hijos de su puta madre
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
