@@ -87,7 +87,12 @@ public class Inicio_Pool extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-//hola carlos  
+Pool_Menu poll = new Pool_Menu();
+
+men_1 men = new men_1();
+men.setVisible(true);
+//poll.setVisible(true);
+this.setVisible(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
