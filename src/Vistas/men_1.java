@@ -7,6 +7,7 @@ package Vistas;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Image;
 import java.awt.Toolkit;
+import javax.swing.JPanel;
 
 
 
@@ -23,13 +25,14 @@ import java.awt.Toolkit;
  * @author eduarckangrck
  */
 public class men_1 extends javax.swing.JFrame {
+   // fondo fondo1 = new fondo();
 private int indice;
 private  List<JButton> botones;
     /**
      * Creates new form men_1
      */
     public men_1() {
-        
+       // this.setContentPane(fondo1);
         initComponents();
    botones = new ArrayList<>();
         indice = 1 ;
@@ -48,7 +51,7 @@ private  List<JButton> botones;
         Boton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
-        panel = new javax.swing.JPanel();
+        panel = new fondo();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -70,7 +73,7 @@ private  List<JButton> botones;
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panel.setBackground(new java.awt.Color(0, 255, 153));
+        panel.setBackground(new java.awt.Color(255, 255, 255));
         panel.setLayout(new java.awt.GridLayout(0, 4));
         jPanel1.add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 750, 460));
 
@@ -111,6 +114,7 @@ boton.setForeground(Color.black);
 //ImageIcon imagen = new ImageIcon("m1.jpeg");
 //boton.setIcon(new ImageIcon(imagen.getImage().getScaledInstance(160, 80, Image.SCALE_SMOOTH)));
 boton.setFont(new Font ("Tahoma", Font.BOLD, 40));
+boton.setBackground(Color.green);
 
 indice ++;
 panel.updateUI();
@@ -167,4 +171,20 @@ boton.addActionListener(new ActionListener() {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel panel;
     // End of variables declaration//GEN-END:variables
+
+class fondo extends JPanel{
+    private Image imagen;
+    @Override
+  public void paint(Graphics g){
+  
+          imagen = new ImageIcon(getClass().getResource("/img/0111.jpeg")).getImage();
+          g.drawImage(imagen, 0, 0, getWidth() ,getHeight(),this);
+          setOpaque(false);
+          super.paint(g);
+  }
+
+}
+
+
+
 }
