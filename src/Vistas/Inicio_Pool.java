@@ -4,6 +4,8 @@
  */
 package Vistas;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author eduarckangrck
@@ -29,38 +31,44 @@ public class Inicio_Pool extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        jPTpass = new javax.swing.JPasswordField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jTFuser = new javax.swing.JTextField();
         wallp1 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pol22.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 260, 100, 120));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 290, 100, 120));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pol22.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, 110, 120));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 110, 120));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/002.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 250, 240));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, 250, 240));
 
-        jPasswordField1.setBackground(new java.awt.Color(102, 255, 102));
-        jPasswordField1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jPasswordField1.setText("jPasswordField1");
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        jPTpass.setBackground(new java.awt.Color(153, 255, 153));
+        jPTpass.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jPTpass.setText("jPasswordField1");
+        jPTpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                jPTpassActionPerformed(evt);
             }
         });
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, 530, 70));
+        getContentPane().add(jPTpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, 190, 50));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel4.setText("PASSWORD");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 300, 40));
+        jLabel4.setText("CONTRASEÑA");
+        jLabel4.setMaximumSize(new java.awt.Dimension(200, 40));
+        jLabel4.setMinimumSize(new java.awt.Dimension(200, 40));
+        jLabel4.setPreferredSize(new java.awt.Dimension(200, 40));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 190, 50));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/00.jpeg"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 200, 150));
@@ -75,27 +83,67 @@ public class Inicio_Pool extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, 90, 70));
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(51, 0, 255));
+        jLabel7.setText("USUARIO");
+        jLabel7.setPreferredSize(new java.awt.Dimension(200, 40));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, 130, -1));
+
+        jTFuser.setBackground(new java.awt.Color(153, 255, 153));
+        jTFuser.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jTFuser.setText("jTextField1");
+        jTFuser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTFuserActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTFuser, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 280, 190, 50));
+
         wallp1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pol0.jpeg"))); // NOI18N
         getContentPane().add(wallp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 570));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel6.setText("PASSWORD");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 290, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void jPTpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPTpassActionPerformed
        //holaaaaaaaa
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_jPTpassActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-Pool_Menu poll = new Pool_Menu();
+String user, pass;
 
-men_1 men = new men_1();
-men.setVisible(true);
-//poll.setVisible(true);
-this.setVisible(false);
+user = jTFuser.getText();
+pass = jPTpass.getText();
+
+if (user.equals("") || pass.equals("")){
+    JOptionPane.showMessageDialog(this, "Debe llenar todos los campos","Mensaje de error",JOptionPane.ERROR_MESSAGE);
+}else if(user.equals("Usuario") || pass.equals("User123")){
+     JOptionPane.showMessageDialog(this,"Acceso concedido");
+     Pool_Menu poll = new Pool_Menu();
+     
+     men_1 men = new men_1();
+     men.setVisible(true);
+     this.setVisible(false);
+}else{
+     JOptionPane.showMessageDialog(this, "Los datos no coinciden","Mensaje de error",JOptionPane.ERROR_MESSAGE);
+
 // hola hijos de su puta madre
         // TODO add your handling code here:
+    
+}
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTFuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFuserActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTFuserActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,7 +187,10 @@ this.setVisible(false);
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPasswordField jPTpass;
+    private javax.swing.JTextField jTFuser;
     private javax.swing.JLabel wallp1;
     // End of variables declaration//GEN-END:variables
 }
