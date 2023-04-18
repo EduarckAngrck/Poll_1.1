@@ -190,7 +190,9 @@ if (user.equals("") || pass.equals("")){
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPasswordField jPTpass;
-    private javax.swing.JTextField jTFuser;
+    private javax.swing.JTextField jTFuser; 
     private javax.swing.JLabel wallp1;
     // End of variables declaration//GEN-END:variables
+    
+    // hijos de puta
 }
