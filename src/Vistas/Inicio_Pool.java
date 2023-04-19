@@ -50,11 +50,10 @@ public class Inicio_Pool extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 110, 120));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/002.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 30, 250, 240));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 40, 250, 240));
 
         jPTpass.setBackground(new java.awt.Color(153, 255, 153));
         jPTpass.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jPTpass.setText("jPasswordField1");
         jPTpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPTpassActionPerformed(evt);
@@ -91,7 +90,6 @@ public class Inicio_Pool extends javax.swing.JFrame {
 
         jTFuser.setBackground(new java.awt.Color(153, 255, 153));
         jTFuser.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jTFuser.setText("jTextField1");
         jTFuser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTFuserActionPerformed(evt);
@@ -133,7 +131,7 @@ if (user.equals("") || pass.equals("")){
 }else{
      JOptionPane.showMessageDialog(this, "Los datos no coinciden","Mensaje de error",JOptionPane.ERROR_MESSAGE);
 
-// hola hijos de su puta madre
+//jos de su puta madre
         // TODO add your handling code here:
     
 }
