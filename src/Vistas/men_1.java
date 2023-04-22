@@ -81,7 +81,7 @@ public class men_1 extends javax.swing.JFrame {
 
         panel.setBackground(new java.awt.Color(255, 255, 255));
         panel.setLayout(new java.awt.GridLayout(0, 4));
-        jPanel1.add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 730, 400));
+        jPanel1.add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 730, 380));
 
         jScrollPane1.setViewportView(jPanel1);
 
@@ -116,7 +116,7 @@ public class men_1 extends javax.swing.JFrame {
 
     private void BotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActionPerformed
         mesa1 mesa = new mesa1();
-        JButton boton = new JButton("M-" + indice);
+        JButton boton = new JButton("" +indice);
         panel.add(boton);
         botones.add(boton);
         boton.setForeground(Color.black);
@@ -141,7 +141,9 @@ public class men_1 extends javax.swing.JFrame {
         mesa.setDato(boton.getText());
         tiempo();
         mesa.setFecha(fechaa.getText());
-
+       if (botones.size()> 23 ) {
+            Boton.setEnabled(false);
+        }
 // TODO add your handling code here:
     }//GEN-LAST:event_BotonActionPerformed
 

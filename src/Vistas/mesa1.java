@@ -192,7 +192,7 @@ public class mesa1 extends javax.swing.JFrame {
                 cronometroKeyReleased(evt);
             }
         });
-        getContentPane().add(cronometro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 170, 40));
+        getContentPane().add(cronometro, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 170, 40));
 
         stopp.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         stopp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pol22.png"))); // NOI18N
@@ -501,7 +501,7 @@ public class mesa1 extends javax.swing.JFrame {
 
     public void setDato(String dato) {
         this.dato = dato;
-        mesaa.setText(dato);
+        mesaa.setText("MESA - " + dato);
 
     }
 
