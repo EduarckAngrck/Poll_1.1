@@ -1,9 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Vistas;
-
 
 import java.awt.Color;
 import java.awt.Font;
@@ -15,28 +10,38 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Image;
-import java.awt.Toolkit;
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
+//import java.awt.Toolkit;
+//import javax.swing.JLabel;
 import javax.swing.JPanel;
-
 
 
 /**
  *
- * @author eduarckangrck
+ * @author  eduarckangr ck
  */
 public class men_1 extends javax.swing.JFrame {
-   // fondo fondo1 = new fondo();
-private int indice;
-private  List<JButton> botones;
+
+    public String c = "g";
+    // fondo fondo1 = new fondo();
+    private int dat;
+    private int cron;
+    private int min;
+    private int indice;
+    private List<JButton> botones;
+
     /**
      * Creates new form men_1
      */
     public men_1() {
-       // this.setContentPane(fondo1);
+        // this.setContentPane(fondo1);
         initComponents();
-   botones = new ArrayList<>();
-        indice = 1 ;
-    
+        setLocationRelativeTo(null);
+        botones = new ArrayList<>();
+        indice = 1;
+
     }
 
     /**
@@ -55,6 +60,7 @@ private  List<JButton> botones;
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        fechaa = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -75,11 +81,11 @@ private  List<JButton> botones;
 
         panel.setBackground(new java.awt.Color(255, 255, 255));
         panel.setLayout(new java.awt.GridLayout(0, 4));
-        jPanel1.add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 750, 460));
+        jPanel1.add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 730, 400));
 
         jScrollPane1.setViewportView(jPanel1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 750, 450));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 750, 410));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Ajustes.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -99,6 +105,9 @@ private  List<JButton> botones;
         jButton3.setContentAreaFilled(false);
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 120, 120));
 
+        fechaa.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        getContentPane().add(fechaa, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, 300, 30));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pol0.jpeg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -14, 986, 590));
 
@@ -106,23 +115,33 @@ private  List<JButton> botones;
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActionPerformed
- JButton boton = new JButton("MESA" + indice);  
- panel.add(boton);
-botones.add(boton);
-boton.setForeground(Color.black);
+        mesa1 mesa = new mesa1();
+        JButton boton = new JButton("M-" + indice);
+        panel.add(boton);
+        botones.add(boton);
+        boton.setForeground(Color.black);
+        Image imagen = new ImageIcon(getClass().getResource("/img/BALL_1.png")).getImage();
+        int w = boton.getWidth() + 100;
+        int h = boton.getHeight() + 100;
+// jjjjj
 //boton.setBorder(null);
 //ImageIcon imagen = new ImageIcon("m1.jpeg");
-//boton.setIcon(new ImageIcon(imagen.getImage().getScaledInstance(160, 80, Image.SCALE_SMOOTH)));
-boton.setFont(new Font ("Tahoma", Font.BOLD, 40));
-boton.setBackground(Color.green);
+        boton.setIcon(new ImageIcon(imagen.getScaledInstance(w, h, Image.SCALE_SMOOTH)));
+        boton.setFont(new Font("Tahoma", Font.BOLD, 30));
+        boton.setBackground(Color.GREEN);
+        indice++;
+        panel.updateUI();
+        boton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mesa.setVisible(true);
+                
+            }
+        });
+        mesa.setDato(boton.getText());
+        tiempo();
+        mesa.setFecha(fechaa.getText());
 
-indice ++;
-panel.updateUI();
-boton.addActionListener(new ActionListener() {
-     @Override
-     public void actionPerformed(ActionEvent e) {
-         System.out.println("Hola carlos" + indice);    }
- });
 // TODO add your handling code here:
     }//GEN-LAST:event_BotonActionPerformed
 
@@ -163,6 +182,7 @@ boton.addActionListener(new ActionListener() {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Boton;
+    private javax.swing.JLabel fechaa;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -171,20 +191,47 @@ boton.addActionListener(new ActionListener() {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel panel;
     // End of variables declaration//GEN-END:variables
+//    
 
-class fondo extends JPanel{
-    private Image imagen;
-    @Override
-  public void paint(Graphics g){
-  
-          imagen = new ImageIcon(getClass().getResource("/img/0111.jpeg")).getImage();
-          g.drawImage(imagen, 0, 0, getWidth() ,getHeight(),this);
-          setOpaque(false);
-          super.paint(g);
-  }
+    class fondo extends JPanel {
 
-}
+        private Image imagen;
 
+        @Override
+        public void paint(Graphics g) {
 
+            imagen = new ImageIcon(getClass().getResource("/img/0111.jpeg")).getImage();
+            g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+            setOpaque(false);
+            super.paint(g);
+        }
+
+    }
+
+    public void getTiempo(int dato) {
+        this.dat = dato;
+
+    }
+
+    public void getCrono(int dato) {
+        this.cron = dato;
+
+    }
+
+    public void getMin(int dato) {
+        this.min = dato;
+    }
+
+    public void tiempo() {
+        Timer tim = new Timer();
+        TimerTask ti = new TimerTask() {
+            @Override
+            public void run() {
+
+                fechaa.setText("" + new Date());
+            }
+        };
+        tim.schedule(ti, 0, 1000);
+    }
 
 }
