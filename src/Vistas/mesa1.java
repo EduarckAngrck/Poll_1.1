@@ -261,7 +261,7 @@ public class mesa1 extends javax.swing.JFrame {
         horas.setEnabled(false);
         inic.setEnabled(false);
         jbTotal.setEnabled(true);
-       
+
         valTex();
 
         // TODO add your handling code here:
@@ -566,12 +566,10 @@ public class mesa1 extends javax.swing.JFrame {
 
     }
 
-    
-
     public void valTex() {
         int horr = Integer.parseInt(horas.getText());
         int minn = Integer.parseInt(minutt.getText());
-        if ((horr == 00 && minn == 00) || (horr == 0 && minn == 0) || horr > 24 || minn > 60 ) {
+        if ((horr == 00 && minn == 00) || (horr == 0 && minn == 0) || horr > 24 || minn > 60) {
             JOptionPane.showMessageDialog(this, "rellenar bien los campos");
             horas.setText("00");
             minutt.setText("00");
@@ -587,4 +585,5 @@ public class mesa1 extends javax.swing.JFrame {
         }
 
     }
+    // hola buenas noches
 }
