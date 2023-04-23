@@ -191,7 +191,7 @@ public class mesa1 extends javax.swing.JFrame {
                 inicActionPerformed(evt);
             }
         });
-        getContentPane().add(inic, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 190, 40));
+        getContentPane().add(inic, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 190, 40));
 
         jbTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbTotal.setText("Total");
@@ -222,7 +222,7 @@ public class mesa1 extends javax.swing.JFrame {
                 stoppActionPerformed(evt);
             }
         });
-        getContentPane().add(stopp, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 220, 40));
+        getContentPane().add(stopp, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 220, 40));
 
         fech1.setBackground(new java.awt.Color(51, 255, 51));
         fech1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -292,20 +292,18 @@ public class mesa1 extends javax.swing.JFrame {
     private void extraKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_extraKeyReleased
 
         resExtra(extra.getText());
-        
 
         // TODO add your handling code here:
     }//GEN-LAST:event_extraKeyReleased
 
     private void cantidadKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cantidadKeyReleased
         resCanti(cantidad.getText());
-        
 
         // TODO add your handling code here:
     }//GEN-LAST:event_cantidadKeyReleased
 
     private void jbTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbTotalActionPerformed
-         double horr = Double.parseDouble(horas.getText());
+        double horr = Double.parseDouble(horas.getText());
         double minuu = Double.parseDouble(minutt.getText());
         double ext = Double.parseDouble(extra.getText());
         total = total + ext + (horr * 60) + minuu;
@@ -315,23 +313,29 @@ public class mesa1 extends javax.swing.JFrame {
         extra.setText("00");
         jbTotal.setEnabled(false);
         // horas.setText("00");
-       // minutt.setText("00");
+        // minutt.setText("00");
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jbTotalActionPerformed
 
     private void agreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agreeActionPerformed
 
-          double canti = Double.parseDouble(cantidad.getText());
-          String t ;
-        
+        double canti = Double.parseDouble(cantidad.getText());
+        String t;
+
         switch (productos.getSelectedItem().toString()) {
             case "PAPAS":
-                total += (45 * canti) ;
+                total += (45 * canti);
+                t = String.valueOf(total);
+                prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
+                tot.setText(t);
+                break;
+             case "REFRESCO":
+                total += (20 * canti) ;
                   t = String.valueOf(total);
                 prodMen.setText("se agrego " +  cantidad.getText() + " " + productos.getSelectedItem().toString()   );
                 tot.setText(t);
-                break; 
+                break;
             default:
                 throw new AssertionError();
         }
@@ -383,7 +387,6 @@ public class mesa1 extends javax.swing.JFrame {
     }//GEN-LAST:event_minuttKeyReleased
 
     private void extraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_extraActionPerformed
-  
 
         // TODO add your handling code here:
     }//GEN-LAST:event_extraActionPerformed
@@ -471,8 +474,8 @@ public class mesa1 extends javax.swing.JFrame {
 
             }
 
-        }else{
-        horas.setText("0");
+        } else {
+            horas.setText("0");
         }
 
     }
@@ -487,11 +490,11 @@ public class mesa1 extends javax.swing.JFrame {
                 if (!Character.isDigit(c)) {
                     extra.setText("0");
 
-                } 
+                }
             }
 
-        }else{
-        extra.setText("0");
+        } else {
+            extra.setText("0");
         }
 
     }
@@ -503,17 +506,17 @@ public class mesa1 extends javax.swing.JFrame {
 
             for (int i = 0; i < num.length(); i++) {
                 char c = num.charAt(i);
-                if (!Character.isDigit(c) || num.length()> 2 ) {
+                if (!Character.isDigit(c) || num.length() > 2) {
                     cantidad.setText("0");
                     agree.setEnabled(false);
                 } else if (Character.isDigit(c)) {
                     //cantidad.setText(num);
-                     agree.setEnabled(true);
+                    agree.setEnabled(true);
                 }
             }
 
-        }else{
-        cantidad.setText("0");
+        } else {
+            cantidad.setText("0");
         }
 
     }
@@ -620,8 +623,8 @@ public class mesa1 extends javax.swing.JFrame {
 
             }
 
-        }else{
-        minutt.setText("0");
+        } else {
+            minutt.setText("0");
         }
 
     }
@@ -631,7 +634,7 @@ public class mesa1 extends javax.swing.JFrame {
         int minn = Integer.parseInt(minutt.getText());
         if ((horr == 00 && minn == 00) || (horr == 0 && minn == 0) || horr > 24 || minn > 60) {
             JOptionPane.showMessageDialog(this, "rellenar bien los campos");
-           
+
             horas.setText("0");
             minutt.setText("0");
             stopp.setEnabled(false);
