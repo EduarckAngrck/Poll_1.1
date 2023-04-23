@@ -77,6 +77,7 @@ public class mesa1 extends javax.swing.JFrame {
         stopp = new javax.swing.JButton();
         fech1 = new javax.swing.JLabel();
         minutt = new javax.swing.JTextField();
+        prodMen = new javax.swing.JLabel();
         WALLP = new javax.swing.JLabel();
 
         jLabel4.setText("jLabel4");
@@ -86,7 +87,7 @@ public class mesa1 extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("PRODUCTOS");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, 140, 20));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, 140, 20));
 
         fech.setBackground(new java.awt.Color(51, 255, 51));
         fech.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -100,26 +101,32 @@ public class mesa1 extends javax.swing.JFrame {
         productos.setBackground(new java.awt.Color(102, 255, 102));
         productos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         productos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PAPAS", "REFRESCO", "SOPA INSTANTANEA ", "PALOMITAS ", "JUGOS", "CERVESA ", "HOT DOG ", "PITO", " " }));
-        getContentPane().add(productos, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 100, -1, -1));
+        getContentPane().add(productos, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 100, -1, -1));
 
         cantidad.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cantidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cantidadActionPerformed(evt);
+            }
+        });
         cantidad.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 cantidadKeyReleased(evt);
             }
         });
-        getContentPane().add(cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, 80, 30));
+        getContentPane().add(cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 170, 80, 30));
 
         agree.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         agree.setBorder(null);
         agree.setBorderPainted(false);
         agree.setContentAreaFilled(false);
+        agree.setEnabled(false);
         agree.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 agreeActionPerformed(evt);
             }
         });
-        getContentPane().add(agree, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, 100, 100));
+        getContentPane().add(agree, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, 80, 80));
 
         tot.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         getContentPane().add(tot, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 100, 40));
@@ -144,7 +151,7 @@ public class mesa1 extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setText("CANTIDAD ");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 130, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, -1, -1));
 
         horas.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         horas.setText("00");
@@ -179,7 +186,7 @@ public class mesa1 extends javax.swing.JFrame {
                 inicActionPerformed(evt);
             }
         });
-        getContentPane().add(inic, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 190, 40));
+        getContentPane().add(inic, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 190, 40));
 
         jbTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbTotal.setText("Total");
@@ -191,7 +198,9 @@ public class mesa1 extends javax.swing.JFrame {
         });
         getContentPane().add(jbTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 340, -1, -1));
 
+        cronometro.setBackground(new java.awt.Color(255, 255, 255));
         cronometro.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        cronometro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         cronometro.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 cronometroKeyReleased(evt);
@@ -228,7 +237,10 @@ public class mesa1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(minutt, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 80, 30));
-        getContentPane().add(WALLP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 410));
+
+        prodMen.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        getContentPane().add(prodMen, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, 170, 20));
+        getContentPane().add(WALLP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 410));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -282,12 +294,13 @@ public class mesa1 extends javax.swing.JFrame {
 
     private void cantidadKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cantidadKeyReleased
         resCanti(cantidad.getText());
+        
 
         // TODO add your handling code here:
     }//GEN-LAST:event_cantidadKeyReleased
 
     private void jbTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbTotalActionPerformed
-        double horr = Double.parseDouble(horas.getText());
+         double horr = Double.parseDouble(horas.getText());
         double minuu = Double.parseDouble(minutt.getText());
         double ext = Double.parseDouble(extra.getText());
         total = total + ext + (horr * 60) + minuu;
@@ -297,13 +310,23 @@ public class mesa1 extends javax.swing.JFrame {
         extra.setText("00");
         jbTotal.setEnabled(false);
         // horas.setText("00");
-        //minutt.setText("00");
+       // minutt.setText("00");
 
 // TODO add your handling code here:
     }//GEN-LAST:event_jbTotalActionPerformed
 
     private void agreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agreeActionPerformed
 
+          double canti = Double.parseDouble(cantidad.getText());
+        
+        switch (productos.getSelectedItem().toString()) {
+            case "PAPAS":
+                total += (45 * canti) ;
+                prodMen.setText("se agrego " + productos.getSelectedItem().toString() + " " + cantidad.getText() );
+                break; 
+            default:
+                throw new AssertionError();
+        }
         // TODO add your handling code here:
     }//GEN-LAST:event_agreeActionPerformed
 
@@ -355,6 +378,10 @@ public class mesa1 extends javax.swing.JFrame {
 
         // TODO add your handling code here:
     }//GEN-LAST:event_extraActionPerformed
+
+    private void cantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cantidadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cantidadActionPerformed
 
     /**
      * @param args the command line arguments
@@ -410,6 +437,7 @@ public class mesa1 extends javax.swing.JFrame {
     private javax.swing.JButton jbTotal;
     private javax.swing.JLabel mesaa;
     private javax.swing.JTextField minutt;
+    private javax.swing.JLabel prodMen;
     private javax.swing.JComboBox<String> productos;
     private javax.swing.JButton stopp;
     private javax.swing.JLabel tiempo;
@@ -462,11 +490,12 @@ public class mesa1 extends javax.swing.JFrame {
 
             for (int i = 0; i < num.length(); i++) {
                 char c = num.charAt(i);
-                if (Character.isLetter(c)) {
-                    cantidad.setText("");
-
+                if (Character.isLetter(c) || Character.isSpaceChar(c) || num.length()> 2) {
+                    cantidad.setText("0");
+                    
                 } else if (Character.isDigit(c)) {
                     cantidad.setText(num);
+                     agree.setEnabled(true);
                 }
             }
 
