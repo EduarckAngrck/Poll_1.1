@@ -120,7 +120,7 @@ public class men_1 extends javax.swing.JFrame {
         panel.add(boton);
         botones.add(boton);
         boton.setForeground(Color.black);
-        Image imagen = new ImageIcon(getClass().getResource("/img/pol22.png")).getImage();
+        Image imagen = new ImageIcon(getClass().getResource("/img/bola.png")).getImage();
         int w = boton.getWidth() + 64;
         int h = boton.getHeight() + 64;
 // jjjjj
