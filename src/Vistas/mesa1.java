@@ -119,7 +119,7 @@ public class mesa1 extends javax.swing.JFrame {
                 agreeActionPerformed(evt);
             }
         });
-        getContentPane().add(agree, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, 100, 80));
+        getContentPane().add(agree, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, 100, 100));
 
         tot.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         getContentPane().add(tot, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 100, 40));
@@ -168,7 +168,7 @@ public class mesa1 extends javax.swing.JFrame {
         getContentPane().add(tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 240, 30));
 
         mesaa.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        getContentPane().add(mesaa, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 180, 40));
+        getContentPane().add(mesaa, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, 180, 40));
 
         inic.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         inic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pol22.png"))); // NOI18N
@@ -275,6 +275,7 @@ public class mesa1 extends javax.swing.JFrame {
     private void extraKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_extraKeyReleased
 
         resExtra(extra.getText());
+        
 
         // TODO add your handling code here:
     }//GEN-LAST:event_extraKeyReleased
@@ -436,7 +437,7 @@ public class mesa1 extends javax.swing.JFrame {
 
     public void resExtra(String num) {
 
-        if (num.length() > 0) {
+        if (num.length() > 0 && num.length() < 8) {
 
             for (int i = 0; i < num.length(); i++) {
                 char c = num.charAt(i);
@@ -448,6 +449,8 @@ public class mesa1 extends javax.swing.JFrame {
                 }
             }
 
+        }else{
+        extra.setText("");
         }
 
     }
