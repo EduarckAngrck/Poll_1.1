@@ -130,6 +130,11 @@ public class mesa1 extends javax.swing.JFrame {
 
         extra.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         extra.setText("00");
+        extra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                extraActionPerformed(evt);
+            }
+        });
         extra.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 extraKeyReleased(evt);
@@ -343,6 +348,12 @@ public class mesa1 extends javax.swing.JFrame {
 
 // TODO add your handling code here:
     }//GEN-LAST:event_minuttKeyReleased
+
+    private void extraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_extraActionPerformed
+  
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_extraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -571,10 +582,11 @@ public class mesa1 extends javax.swing.JFrame {
         int minn = Integer.parseInt(minutt.getText());
         if ((horr == 00 && minn == 00) || (horr == 0 && minn == 0) || horr > 24 || minn > 60) {
             JOptionPane.showMessageDialog(this, "rellenar bien los campos");
+           
             horas.setText("00");
             minutt.setText("00");
             stopp.setEnabled(false);
-            inic.setEnabled(true);
+            inic.setEnabled(false);
             tie.stop();
             horas.setEnabled(true);
             minutt.setEnabled(true);
