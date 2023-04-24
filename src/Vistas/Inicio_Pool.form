@@ -99,12 +99,12 @@
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/img/POOLBALL_LOGO.png"/>
+          <Image iconType="3" name="/img/lg.png"/>
         </Property>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="30" y="30" width="230" height="150"/>
+          <AbsoluteConstraints x="50" y="40" width="230" height="150"/>
         </Constraint>
       </Constraints>
     </Component>
