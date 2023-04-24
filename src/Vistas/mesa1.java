@@ -418,7 +418,8 @@ public class mesa1 extends javax.swing.JFrame {
     }//GEN-LAST:event_totActionPerformed
 
     private void cerraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerraActionPerformed
-this.setVisible(false);
+    
+        this.setVisible(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_cerraActionPerformed
 

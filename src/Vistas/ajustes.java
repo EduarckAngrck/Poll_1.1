@@ -19,6 +19,7 @@ public class ajustes extends javax.swing.JFrame {
      */
     public ajustes() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -30,47 +31,34 @@ public class ajustes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
-        agregar = new javax.swing.JButton();
+        Regresar = new javax.swing.JButton();
         jLabel_fond = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Regresar.setText("Regresar");
+        Regresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                RegresarActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 130, 50));
+        getContentPane().add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 100, 50));
 
-        agregar.setText("agregar");
-        agregar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                agregarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 100, 50));
-
-        jLabel_fond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pol1.jpeg"))); // NOI18N
-        getContentPane().add(jLabel_fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, 987, 580));
+        jLabel_fond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mesa_principal.png"))); // NOI18N
+        getContentPane().add(jLabel_fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, -10, 1080, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarActionPerformed
-      
-      
-
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_agregarActionPerformed
+    private void RegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarActionPerformed
+        // Boton para regresarse al menu principal
+        
+        men_1 newframe = new men_1();
+        newframe.setVisible(Boolean.FALSE);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_RegresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -108,9 +96,8 @@ public class ajustes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton agregar;
+    private javax.swing.JButton Regresar;
     private javax.swing.JLabel jLabel_fond;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
 
