@@ -137,7 +137,7 @@ public class men_1 extends javax.swing.JFrame {
         getContentPane().add(ac, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 80, 80));
 
         fechaa.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        getContentPane().add(fechaa, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, 300, 30));
+        getContentPane().add(fechaa, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, 300, 30));
         getContentPane().add(pol, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 90, 90));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pol0.jpeg"))); // NOI18N
