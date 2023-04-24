@@ -115,7 +115,7 @@ public class Inicio_Pool extends javax.swing.JFrame {
 
         message.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         getContentPane().add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 290, 390, 30));
-        getContentPane().add(wallp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 570));
+        getContentPane().add(wallp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, -40, 1060, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
