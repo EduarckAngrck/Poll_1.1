@@ -106,7 +106,7 @@ public class mesa1 extends javax.swing.JFrame {
 
         productos.setBackground(new java.awt.Color(102, 255, 102));
         productos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        productos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PAPAS", "REFRESCO", "SOPA INSTANTANEA ", "PALOMITAS ", "JUGOS", "CERVESA ", "HOT DOG ", "PITO", " " }));
+        productos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PAPAS", "REFRESCO", "SOPA INSTANTANEA ", "PALOMITAS ", "JUGOS", "CERVESA ", "HOT DOG ", " ", " " }));
         getContentPane().add(productos, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, -1, -1));
 
         cantidad.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -260,7 +260,7 @@ public class mesa1 extends javax.swing.JFrame {
                 cerraActionPerformed(evt);
             }
         });
-        getContentPane().add(cerra, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 40));
+        getContentPane().add(cerra, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 50, 50));
         getContentPane().add(WALLP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 410));
 
         pack();
