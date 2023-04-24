@@ -104,7 +104,7 @@ public class men_1 extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPanel1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 750, 410));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 750, 410));
 
         aj.setBorder(null);
         aj.setBorderPainted(false);
@@ -141,7 +141,7 @@ public class men_1 extends javax.swing.JFrame {
         getContentPane().add(pol, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 90, 90));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pol0.jpeg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 990, 570));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 570));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
