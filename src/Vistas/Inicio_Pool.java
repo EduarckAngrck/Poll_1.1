@@ -22,7 +22,7 @@ public class Inicio_Pool extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         inicia.setEnabled(false);
-        ImageIcon imgen = new ImageIcon(getClass().getResource("/img/messs.png"));
+        ImageIcon imgen = new ImageIcon(getClass().getResource("/img/pol0.jpeg"));
         Icon fond = new ImageIcon(imgen.getImage().getScaledInstance(wallp1.getWidth(), wallp1.getHeight(), Image.SCALE_DEFAULT));
         wallp1.setIcon(fond);
         this.repaint();
@@ -82,7 +82,7 @@ public class Inicio_Pool extends javax.swing.JFrame {
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 320, 300, 40));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/POOLBALL_LOGO.png"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 230, 150));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 230, 150));
 
         inicia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/log1.png"))); // NOI18N
         inicia.setBorder(null);
@@ -115,7 +115,7 @@ public class Inicio_Pool extends javax.swing.JFrame {
 
         message.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         getContentPane().add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 290, 390, 30));
-        getContentPane().add(wallp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, -40, 1060, 620));
+        getContentPane().add(wallp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 570));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
