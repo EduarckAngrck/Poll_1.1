@@ -43,6 +43,9 @@ public class mesa1 extends javax.swing.JFrame {
         ImageIcon image = new ImageIcon(getClass().getResource("/img/0.png"));
         Icon bott = new ImageIcon(image.getImage().getScaledInstance(agree.getWidth(), agree.getHeight(), Image.SCALE_DEFAULT));
         agree.setIcon(bott);
+         ImageIcon imag = new ImageIcon(getClass().getResource("/img/cerrar.png"));
+        Icon cerr = new ImageIcon(imag.getImage().getScaledInstance(cerra.getWidth(), cerra.getHeight(), Image.SCALE_DEFAULT));
+        cerra.setIcon(cerr);
         this.repaint();
         tot.setEditable(false);
         
@@ -79,6 +82,7 @@ public class mesa1 extends javax.swing.JFrame {
         fech1 = new javax.swing.JLabel();
         minutt = new javax.swing.JTextField();
         prodMen = new javax.swing.JLabel();
+        cerra = new javax.swing.JButton();
         WALLP = new javax.swing.JLabel();
 
         jLabel4.setText("jLabel4");
@@ -247,7 +251,17 @@ public class mesa1 extends javax.swing.JFrame {
 
         prodMen.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         getContentPane().add(prodMen, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 170, 20));
-        getContentPane().add(WALLP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 680, 400));
+
+        cerra.setBorder(null);
+        cerra.setBorderPainted(false);
+        cerra.setContentAreaFilled(false);
+        cerra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cerraActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cerra, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 40));
+        getContentPane().add(WALLP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 410));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -401,6 +415,11 @@ public class mesa1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_totActionPerformed
 
+    private void cerraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerraActionPerformed
+this.setVisible(false);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cerraActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -440,6 +459,7 @@ public class mesa1 extends javax.swing.JFrame {
     private javax.swing.JLabel WALLP;
     private javax.swing.JButton agree;
     private javax.swing.JTextField cantidad;
+    private javax.swing.JButton cerra;
     private javax.swing.JLabel cronometro;
     private javax.swing.JTextField extra;
     private javax.swing.JLabel fech;
