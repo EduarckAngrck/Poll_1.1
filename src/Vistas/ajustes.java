@@ -8,6 +8,8 @@ import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 /**
  *
  * @author eduarckangrck
@@ -20,6 +22,14 @@ public class ajustes extends javax.swing.JFrame {
     public ajustes() {
         initComponents();
         this.setLocationRelativeTo(null);
+        // Obtener el tamaño de la pantalla
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        int width = screenSize.width;
+        int height = screenSize.height;
+        
+        int windowWidth = (int) (width * 0.8);
+        int windowHeight = (int) (height * 0.8);
+        setSize(windowWidth, windowHeight);
     }
 
     /**
@@ -46,6 +56,11 @@ public class ajustes extends javax.swing.JFrame {
         getContentPane().add(Regresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 100, 50));
 
         jLabel_fond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mesa_principal.png"))); // NOI18N
+        jLabel_fond.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jLabel_fondKeyPressed(evt);
+            }
+        });
         getContentPane().add(jLabel_fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, -10, 1080, 600));
 
         pack();
@@ -59,6 +74,10 @@ public class ajustes extends javax.swing.JFrame {
         this.setVisible(false);
         
     }//GEN-LAST:event_RegresarActionPerformed
+
+    private void jLabel_fondKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jLabel_fondKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel_fondKeyPressed
 
     /**
      * @param args the command line arguments
