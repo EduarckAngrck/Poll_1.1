@@ -35,10 +35,7 @@ public class Inicio_Pool extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         pass = new javax.swing.JPasswordField();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         inicia = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
         user = new javax.swing.JTextField();
         message = new javax.swing.JLabel();
         wallp1 = new javax.swing.JLabel();
@@ -46,17 +43,19 @@ public class Inicio_Pool extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pol22.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 310, 100, 120));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/POOLBALL_LOGO.png"))); // NOI18N
+        jLabel1.setToolTipText("");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 60, 230, 180));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pol22.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 110, 120));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/User.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/002.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, 250, 240));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Pass.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, -1, -1));
 
-        pass.setBackground(new java.awt.Color(102, 255, 102));
+        pass.setBackground(new java.awt.Color(178, 236, 160));
         pass.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        pass.setToolTipText("Contraseña");
         pass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passActionPerformed(evt);
@@ -67,15 +66,7 @@ public class Inicio_Pool extends javax.swing.JFrame {
                 passKeyReleased(evt);
             }
         });
-        getContentPane().add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 390, 320, 50));
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel4.setText("USUARIO");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 320, 300, 40));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/00.jpeg"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 200, 150));
+        getContentPane().add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 410, 240, 50));
 
         inicia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/log1.png"))); // NOI18N
         inicia.setBorder(null);
@@ -85,15 +76,11 @@ public class Inicio_Pool extends javax.swing.JFrame {
                 iniciaActionPerformed(evt);
             }
         });
-        getContentPane().add(inicia, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 440, 90, 70));
+        getContentPane().add(inicia, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 350, 90, 70));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel6.setText("PASSWORD");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 390, 300, 40));
-
-        user.setBackground(new java.awt.Color(51, 255, 51));
+        user.setBackground(new java.awt.Color(178, 236, 160));
         user.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        user.setToolTipText("User");
         user.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userActionPerformed(evt);
@@ -104,13 +91,13 @@ public class Inicio_Pool extends javax.swing.JFrame {
                 userKeyReleased(evt);
             }
         });
-        getContentPane().add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 320, 320, 50));
+        getContentPane().add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, 240, 50));
 
         message.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        getContentPane().add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 280, 390, 30));
+        getContentPane().add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, 390, 30));
 
-        wallp1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pol0.jpeg"))); // NOI18N
-        getContentPane().add(wallp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 570));
+        wallp1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mesa_principal.png"))); // NOI18N
+        getContentPane().add(wallp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 1070, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -183,9 +170,6 @@ this.setVisible(false);
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel message;
     private javax.swing.JPasswordField pass;
     private javax.swing.JTextField user;
