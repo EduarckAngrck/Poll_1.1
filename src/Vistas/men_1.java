@@ -14,6 +14,7 @@ import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 import javax.swing.Icon;
+import javax.swing.JOptionPane;
 //import java.awt.Toolkit;
 //import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -187,6 +188,7 @@ public class men_1 extends javax.swing.JFrame {
     }//GEN-LAST:event_hpActionPerformed
 
     private void acActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acActionPerformed
+        JOptionPane.showMessageDialog(null, "PollBall - WORKING PROGRESS \nEmpresa: FrogSoft \nCorreo electronico: FrogSoft2023@gmail.com \nNumero de contacto: 5971145270 \nDirección: Calle 5 de Mayo, Sin Número, 9C, Tlahuelilpan Centro");
         // TODO add your handling code here:
     }//GEN-LAST:event_acActionPerformed
 
