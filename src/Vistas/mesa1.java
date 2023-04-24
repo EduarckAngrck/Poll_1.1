@@ -260,7 +260,7 @@ public class mesa1 extends javax.swing.JFrame {
                 cerraActionPerformed(evt);
             }
         });
-        getContentPane().add(cerra, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 50, 50));
+        getContentPane().add(cerra, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
         getContentPane().add(WALLP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 410));
 
         pack();

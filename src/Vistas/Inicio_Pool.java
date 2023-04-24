@@ -25,7 +25,7 @@ public class Inicio_Pool extends javax.swing.JFrame {
         ImageIcon imgen = new ImageIcon(getClass().getResource("/img/messs.png"));
         Icon fon = new ImageIcon(imgen.getImage().getScaledInstance(wallp1.getWidth(), wallp1.getHeight(), Image.SCALE_DEFAULT));
         wallp1.setIcon(fon);
-        
+        this.repaint();
         
     }
 
