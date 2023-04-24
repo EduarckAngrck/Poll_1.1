@@ -23,8 +23,8 @@ public class Inicio_Pool extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         inicia.setEnabled(false);
         ImageIcon imgen = new ImageIcon(getClass().getResource("/img/messs.png"));
-        Icon fon = new ImageIcon(imgen.getImage().getScaledInstance(wallp1.getWidth(), wallp1.getHeight(), Image.SCALE_DEFAULT));
-        wallp1.setIcon(fon);
+        Icon fond = new ImageIcon(imgen.getImage().getScaledInstance(wallp1.getWidth(), wallp1.getHeight(), Image.SCALE_DEFAULT));
+        wallp1.setIcon(fond);
         this.repaint();
         
     }
@@ -114,7 +114,7 @@ public class Inicio_Pool extends javax.swing.JFrame {
         getContentPane().add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 320, 320, 50));
 
         message.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        getContentPane().add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 280, 390, 30));
+        getContentPane().add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 290, 390, 30));
         getContentPane().add(wallp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 570));
 
         pack();
