@@ -116,7 +116,8 @@ public class mesa1 extends javax.swing.JFrame {
         });
         getContentPane().add(productos, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, -1, -1));
 
-        cantidad.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cantidad.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        cantidad.setText("0");
         cantidad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cantidadActionPerformed(evt);
