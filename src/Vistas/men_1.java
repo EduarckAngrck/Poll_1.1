@@ -67,6 +67,7 @@ public class men_1 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Boton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Agregar.png"))); // NOI18N
@@ -146,7 +147,7 @@ public class men_1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActionPerformed
-        mesa1 mesa = new mesa1();
+       
         JButton boton = new JButton("" +indice);
         panel.add(boton);
         botones.add(boton);
@@ -154,6 +155,7 @@ public class men_1 extends javax.swing.JFrame {
         Image imagen = new ImageIcon(getClass().getResource("/img/bola.png")).getImage();
         int w = boton.getWidth() + 64;
         int h = boton.getHeight() + 64;
+        
 // jjjjj
 //boton.setBorder(null);
 //     ImageIcon imagen = new ImageIcon("m1.jpeg");
@@ -162,6 +164,7 @@ public class men_1 extends javax.swing.JFrame {
         boton.setBackground(Color.GREEN);
         indice++;
         panel.updateUI();
+        mesa1 mesa = new mesa1();
         boton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -182,7 +185,7 @@ public class men_1 extends javax.swing.JFrame {
         // Boton que abre los ajustes del programa
         
         ajustes newframe = new ajustes();
-        newframe.setVisible(Boolean.TRUE);
+        newframe.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -191,7 +194,8 @@ public class men_1 extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         //Informacion sobre la empresa y version del programa
-        JOptionPane.showMessageDialog(null, "PollBall - WORKING PROGRESS \nEmpresa: FrogSoft \nCorreo electronico: FrogSoft2023@gmail.com \nNumero de contacto: 5971145270 \nDirección: Calle 5 de Mayo, Sin Número, 9C, Tlahuelilpan Centro");
+        Acerca_de newframe = new Acerca_de();
+        newframe.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -254,15 +258,6 @@ public class men_1 extends javax.swing.JFrame {
     class fondo extends JPanel {
 
         private Image imagen;
-
-        @Override
-        public void paint(Graphics g) {
-
-            imagen = new ImageIcon(getClass().getResource("/img/0111.jpeg")).getImage();
-            g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
-            setOpaque(false);
-            super.paint(g);
-        }
 
     }
 

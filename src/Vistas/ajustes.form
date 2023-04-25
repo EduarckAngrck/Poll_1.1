@@ -27,14 +27,17 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="Regresar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Regresar"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/Regresar.png"/>
+        </Property>
+        <Property name="contentAreaFilled" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RegresarActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="70" y="70" width="100" height="50"/>
+          <AbsoluteConstraints x="60" y="50" width="140" height="50"/>
         </Constraint>
       </Constraints>
     </Component>

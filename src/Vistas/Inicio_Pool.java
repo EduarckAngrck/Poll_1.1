@@ -4,16 +4,21 @@
  */
 package Vistas;
 
+import javax.swing.*;
+import java.awt.*;
 /**
  *
  * @author eduarckangrck
  */
 public class Inicio_Pool extends javax.swing.JFrame {
 
-    /**
+    /*
      * Creates new form Inicio_Pool
      */
+
+
     public Inicio_Pool() {
+
         
         initComponents();
         setLocationRelativeTo(null);
@@ -31,6 +36,7 @@ public class Inicio_Pool extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -41,7 +47,19 @@ public class Inicio_Pool extends javax.swing.JFrame {
         wallp1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("FramePool"); // NOI18N
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cerrar.png"))); // NOI18N
+        jButton1.setToolTipText("Cerrar PollBall");
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 70, 70));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/POOLBALL_LOGO.png"))); // NOI18N
         jLabel1.setToolTipText("");
@@ -97,7 +115,7 @@ public class Inicio_Pool extends javax.swing.JFrame {
         getContentPane().add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, 390, 30));
 
         wallp1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mesa_principal.png"))); // NOI18N
-        getContentPane().add(wallp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 1070, 580));
+        getContentPane().add(wallp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 10, 1060, 570));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -108,9 +126,10 @@ public class Inicio_Pool extends javax.swing.JFrame {
     }//GEN-LAST:event_passActionPerformed
 
     private void iniciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciaActionPerformed
-men_1 men = new men_1();
-men.setVisible(true);
-this.setVisible(false);
+        
+        men_1 men = new men_1();
+        men.setVisible(true);
+        this.setVisible(false);
 //hola carlos  
         // TODO add your handling code here:
     }//GEN-LAST:event_iniciaActionPerformed
@@ -130,6 +149,11 @@ this.setVisible(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_passKeyReleased
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+    
     /**
      * @param args the command line arguments
      */
@@ -158,15 +182,19 @@ this.setVisible(false);
         //</editor-fold>
 
         /* Create and display the form */
+
         java.awt.EventQueue.invokeLater(new Runnable() {
+
             public void run() {
                 new Inicio_Pool().setVisible(true);
+
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton inicia;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
