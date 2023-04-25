@@ -305,7 +305,7 @@ public class mesa1 extends javax.swing.JFrame {
     }//GEN-LAST:event_horasActionPerformed
 
     private void inicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inicActionPerformed
-
+       
         tie.start();
 
         stopp.setEnabled(true);
@@ -313,7 +313,7 @@ public class mesa1 extends javax.swing.JFrame {
         horas.setEnabled(false);
         inic.setEnabled(false);
         jbTotal.setEnabled(true);
-
+       crono();
         valTex();
 
         // TODO add your handling code here:
