@@ -272,7 +272,7 @@ public class mesa1 extends javax.swing.JFrame {
         otr.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         otr.setText("0");
         otr.setEnabled(false);
-        getContentPane().add(otr, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, 90, 30));
+        getContentPane().add(otr, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, 90, 30));
 
         ress.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ress.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pol22 2.png"))); // NOI18N
@@ -765,6 +765,7 @@ public class mesa1 extends javax.swing.JFrame {
         seg = 0;
         min = 0;
         hor = 0;
+        ress.setEnabled(false);
 
     }
     // hola buenas noches
