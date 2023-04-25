@@ -85,7 +85,6 @@ public class mesa1 extends javax.swing.JFrame {
         prodMen = new javax.swing.JLabel();
         cerra = new javax.swing.JButton();
         otr = new javax.swing.JTextField();
-        l = new javax.swing.JLabel();
         WALLP = new javax.swing.JLabel();
 
         jLabel4.setText("jLabel4");
@@ -274,7 +273,6 @@ public class mesa1 extends javax.swing.JFrame {
         otr.setText("0");
         otr.setEnabled(false);
         getContentPane().add(otr, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, 90, 30));
-        getContentPane().add(l, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, 60, 30));
         getContentPane().add(WALLP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 410));
 
         pack();
@@ -524,7 +522,6 @@ public class mesa1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JButton jbTotal;
-    private javax.swing.JLabel l;
     private javax.swing.JLabel mesaa;
     private javax.swing.JTextField minutt;
     private javax.swing.JTextField otr;
@@ -728,12 +725,12 @@ public class mesa1 extends javax.swing.JFrame {
     
     
     public void crono(){
-        l.setText(String.valueOf(hor));
+     
   
         if (hor == Integer.parseInt(horas.getText()) && min == Integer.parseInt(minutt.getText())) {
             
             tie.stop();
-            JOptionPane.showMessageDialog(this, "se termini el tiempo");
+            JOptionPane.showMessageDialog(this, "se termini el tiempo"+ mesaa.getText());
         }
     
     }
