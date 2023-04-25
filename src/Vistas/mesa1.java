@@ -313,7 +313,6 @@ public class mesa1 extends javax.swing.JFrame {
         horas.setEnabled(false);
         inic.setEnabled(false);
         jbTotal.setEnabled(true);
-       crono();
         valTex();
 
         // TODO add your handling code here:
@@ -608,6 +607,7 @@ public class mesa1 extends javax.swing.JFrame {
         String h = String.valueOf(hor);
 
         cronometro.setText(text);
+           crono();
     }
 // accion para el cronometro
     private ActionListener acciones = new ActionListener() {
