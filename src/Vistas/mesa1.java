@@ -48,7 +48,6 @@ public class mesa1 extends javax.swing.JFrame {
         cerra.setIcon(cerr);
         this.repaint();
         tot.setEditable(false);
-        
 
     }
 
@@ -85,6 +84,7 @@ public class mesa1 extends javax.swing.JFrame {
         prodMen = new javax.swing.JLabel();
         cerra = new javax.swing.JButton();
         otr = new javax.swing.JTextField();
+        ress = new javax.swing.JButton();
         WALLP = new javax.swing.JLabel();
 
         jLabel4.setText("jLabel4");
@@ -104,7 +104,7 @@ public class mesa1 extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("TOTAL : ");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, 90, 30));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 90, 30));
 
         productos.setBackground(new java.awt.Color(102, 255, 102));
         productos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -147,7 +147,7 @@ public class mesa1 extends javax.swing.JFrame {
                 totActionPerformed(evt);
             }
         });
-        getContentPane().add(tot, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 100, 40));
+        getContentPane().add(tot, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 100, 40));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setText("EXTRA (EN DINERO)");
@@ -204,7 +204,7 @@ public class mesa1 extends javax.swing.JFrame {
                 inicActionPerformed(evt);
             }
         });
-        getContentPane().add(inic, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, 190, 40));
+        getContentPane().add(inic, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 120, 190, 40));
 
         jbTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbTotal.setText("Total");
@@ -214,7 +214,7 @@ public class mesa1 extends javax.swing.JFrame {
                 jbTotalActionPerformed(evt);
             }
         });
-        getContentPane().add(jbTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, -1, -1));
+        getContentPane().add(jbTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, -1, -1));
 
         cronometro.setBackground(new java.awt.Color(255, 255, 255));
         cronometro.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -273,6 +273,17 @@ public class mesa1 extends javax.swing.JFrame {
         otr.setText("0");
         otr.setEnabled(false);
         getContentPane().add(otr, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, 90, 30));
+
+        ress.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ress.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pol22 2.png"))); // NOI18N
+        ress.setText("REINICIAR");
+        ress.setEnabled(false);
+        ress.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ressActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ress, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, 240, 40));
         getContentPane().add(WALLP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 410));
 
         pack();
@@ -303,7 +314,7 @@ public class mesa1 extends javax.swing.JFrame {
     }//GEN-LAST:event_horasActionPerformed
 
     private void inicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inicActionPerformed
-       
+
         tie.start();
 
         stopp.setEnabled(true);
@@ -394,7 +405,7 @@ public class mesa1 extends javax.swing.JFrame {
                 tot.setText(t);
                 break;
             case "OTROS":
-                 otr.setEnabled(true);
+                otr.setEnabled(true);
                 break;
 
             default:
@@ -469,6 +480,12 @@ public class mesa1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_productosActionPerformed
 
+    private void ressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ressActionPerformed
+
+   reIni();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ressActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -527,6 +544,7 @@ public class mesa1 extends javax.swing.JFrame {
     private javax.swing.JTextField otr;
     private javax.swing.JLabel prodMen;
     private javax.swing.JComboBox<String> productos;
+    private javax.swing.JButton ress;
     private javax.swing.JButton stopp;
     private javax.swing.JLabel tiempo;
     private javax.swing.JTextField tot;
@@ -604,7 +622,7 @@ public class mesa1 extends javax.swing.JFrame {
         String h = String.valueOf(hor);
 
         cronometro.setText(text);
-           crono();
+        crono();
     }
 // accion para el cronometro
     private ActionListener acciones = new ActionListener() {
@@ -722,18 +740,32 @@ public class mesa1 extends javax.swing.JFrame {
         }
 
     }
-    
-    
-    public void crono(){
-     
-  
+
+    public void crono() {
+
         if (hor == Integer.parseInt(horas.getText()) && min == Integer.parseInt(minutt.getText())) {
-            
+
             tie.stop();
-            JOptionPane.showMessageDialog(this, "se termini el tiempo "+ mesaa.getText());
+            JOptionPane.showMessageDialog(this, "se termini el tiempo " + mesaa.getText());
             stopp.setEnabled(false);
+            ress.setEnabled(true);
         }
-    
+
+    }
+
+    public void reIni() {
+        horas.setText("0");
+        minutt.setText("0");
+        //stopp.setEnabled(false);
+        //inic.setEnabled(false);
+        tie.stop();
+        horas.setEnabled(true);
+        minutt.setEnabled(true);
+        cente = 0;
+        seg = 0;
+        min = 0;
+        hor = 0;
+
     }
     // hola buenas noches
 }
