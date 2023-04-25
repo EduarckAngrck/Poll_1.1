@@ -757,7 +757,7 @@ public class mesa1 extends javax.swing.JFrame {
         horas.setText("0");
         minutt.setText("0");
         //stopp.setEnabled(false);
-        inic.setEnabled(false);
+        inic.setEnabled(true);
         tie.stop();
         horas.setEnabled(true);
         minutt.setEnabled(true);
