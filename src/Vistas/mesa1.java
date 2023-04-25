@@ -37,18 +37,18 @@ public class mesa1 extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         tie = new Timer(10, acciones);
-        //ImageIcon imagen = new ImageIcon(getClass().getResource("/img/pol0.jpeg"));
-        //Icon fon = new ImageIcon(imagen.getImage().getScaledInstance(WALLP.getWidth(), WALLP.getHeight(), Image.SCALE_DEFAULT));
-        //WALLP.setIcon(fon);
-        //ImageIcon image = new ImageIcon(getClass().getResource("/img/0.png"));
-        //Icon bott = new ImageIcon(image.getImage().getScaledInstance(agree.getWidth(), agree.getHeight(), Image.SCALE_DEFAULT));
-        //agree.setIcon(bott);
-        //ImageIcon imag = new ImageIcon(getClass().getResource("/img/cerrar.png"));
-        //Icon cerr = new ImageIcon(imag.getImage().getScaledInstance(cerra.getWidth(), cerra.getHeight(), Image.SCALE_DEFAULT));
-        //cerra.setIcon(cerr);
+        /*ImageIcon imagen = new ImageIcon(getClass().getResource("/img/pol0.jpeg"));
+        Icon fon = new ImageIcon(imagen.getImage().getScaledInstance(WALLP.getWidth(), WALLP.getHeight(), Image.SCALE_DEFAULT));
+        WALLP.setIcon(fon);
+        ImageIcon image = new ImageIcon(getClass().getResource("/img/0.png"));
+        Icon bott = new ImageIcon(image.getImage().getScaledInstance(agree.getWidth(), agree.getHeight(), Image.SCALE_DEFAULT));
+        agree.setIcon(bott);
+        ImageIcon imag = new ImageIcon(getClass().getResource("/img/cerrar.png"));
+        Icon cerr = new ImageIcon(imag.getImage().getScaledInstance(cerra.getWidth(), cerra.getHeight(), Image.SCALE_DEFAULT));
+        cerra.setIcon(cerr);*/
         this.repaint();
         tot.setEditable(false);
-        
+
     }
 
     /**
@@ -61,7 +61,6 @@ public class mesa1 extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel4 = new javax.swing.JLabel();
-        cerra = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         fech = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -74,7 +73,6 @@ public class mesa1 extends javax.swing.JFrame {
         horas = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         tiempo = new javax.swing.JLabel();
         mesaa = new javax.swing.JLabel();
         inic = new javax.swing.JButton();
@@ -85,6 +83,9 @@ public class mesa1 extends javax.swing.JFrame {
         fech2 = new javax.swing.JLabel();
         minutt = new javax.swing.JTextField();
         prodMen = new javax.swing.JLabel();
+        cerra = new javax.swing.JButton();
+        otr = new javax.swing.JTextField();
+        ress = new javax.swing.JButton();
         WALLP = new javax.swing.JLabel();
 
         jLabel4.setText("jLabel4");
@@ -93,36 +94,31 @@ public class mesa1 extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cerra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Regresar.png"))); // NOI18N
-        cerra.setBorder(null);
-        cerra.setBorderPainted(false);
-        cerra.setContentAreaFilled(false);
-        cerra.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cerraActionPerformed(evt);
-            }
-        });
-        getContentPane().add(cerra, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 130, 50));
-
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel2.setText("Productos");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, 130, 50));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 140, 30));
 
         fech.setBackground(new java.awt.Color(51, 255, 51));
         fech.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         fech.setText("Tiempo");
-        getContentPane().add(fech, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 100, 30));
+        getContentPane().add(fech, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 100, 30));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel1.setText("TOTAL : ");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 400, 110, 40));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("Total:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 350, 60, 40));
 
-        productos.setBackground(new java.awt.Color(178, 236, 160));
+        productos.setBackground(new java.awt.Color(102, 255, 102));
         productos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        productos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PAPAS", "REFRESCO", "SOPA INSTANTANEA ", "PALOMITAS ", "JUGOS", "CERVESA ", "HOT DOG ", "PITO", " " }));
-        getContentPane().add(productos, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 180, 40));
+        productos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PAPAS", "REFRESCO", "SOPA INSTANTANEA ", "PALOMITAS ", "JUGOS", "CERVESA ", "HOT DOG ", "OTROS", " " }));
+        productos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productosActionPerformed(evt);
+            }
+        });
+        getContentPane().add(productos, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, -1, -1));
 
-        cantidad.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        cantidad.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        cantidad.setText("0");
         cantidad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cantidadActionPerformed(evt);
@@ -133,7 +129,7 @@ public class mesa1 extends javax.swing.JFrame {
                 cantidadKeyReleased(evt);
             }
         });
-        getContentPane().add(cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 100, 40));
+        getContentPane().add(cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, 80, 30));
 
         agree.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         agree.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Agregar.png"))); // NOI18N
@@ -146,7 +142,7 @@ public class mesa1 extends javax.swing.JFrame {
                 agreeActionPerformed(evt);
             }
         });
-        getContentPane().add(agree, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, 110, 120));
+        getContentPane().add(agree, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, 90, 110));
 
         tot.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         tot.addActionListener(new java.awt.event.ActionListener() {
@@ -154,11 +150,11 @@ public class mesa1 extends javax.swing.JFrame {
                 totActionPerformed(evt);
             }
         });
-        getContentPane().add(tot, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 400, 100, 40));
+        getContentPane().add(tot, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 350, 100, 40));
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabel5.setText("$");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 40, 60));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setText("Extra (En dinero)");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, -1, -1));
 
         extra.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         extra.setText("00");
@@ -172,7 +168,7 @@ public class mesa1 extends javax.swing.JFrame {
                 extraKeyReleased(evt);
             }
         });
-        getContentPane().add(extra, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 430, 110, 50));
+        getContentPane().add(extra, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, 90, 40));
 
         horas.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         horas.setText("0");
@@ -186,26 +182,21 @@ public class mesa1 extends javax.swing.JFrame {
                 horasKeyReleased(evt);
             }
         });
-        getContentPane().add(horas, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 80, 30));
+        getContentPane().add(horas, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 80, 30));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel6.setText("CANTIDAD ");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 230, -1, -1));
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setText("Cantidad:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 100, 30));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel7.setText("Cronónometro");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
-
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel8.setText("Extras");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 390, 90, -1));
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel7.setText("Cronometro");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, -1));
 
         tiempo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        getContentPane().add(tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 350, 240, 30));
+        getContentPane().add(tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 370, 240, 30));
 
         mesaa.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        mesaa.setToolTipText("");
-        getContentPane().add(mesaa, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 60, 120, 40));
+        getContentPane().add(mesaa, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, 140, 40));
 
         inic.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         inic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Iniciar.png"))); // NOI18N
@@ -216,7 +207,7 @@ public class mesa1 extends javax.swing.JFrame {
                 inicActionPerformed(evt);
             }
         });
-        getContentPane().add(inic, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 280, 170, 60));
+        getContentPane().add(inic, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 150, 200, 50));
 
         jbTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jbTotal.setText("Total");
@@ -226,7 +217,7 @@ public class mesa1 extends javax.swing.JFrame {
                 jbTotalActionPerformed(evt);
             }
         });
-        getContentPane().add(jbTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 460, 80, 40));
+        getContentPane().add(jbTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 410, 80, -1));
 
         cronometro.setBackground(new java.awt.Color(255, 255, 255));
         cronometro.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -236,7 +227,7 @@ public class mesa1 extends javax.swing.JFrame {
                 cronometroKeyReleased(evt);
             }
         });
-        getContentPane().add(cronometro, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 120, 40));
+        getContentPane().add(cronometro, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 320, 120, 40));
 
         stopp.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         stopp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Detener.png"))); // NOI18N
@@ -247,17 +238,17 @@ public class mesa1 extends javax.swing.JFrame {
                 stoppActionPerformed(evt);
             }
         });
-        getContentPane().add(stopp, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 220, 180, 50));
+        getContentPane().add(stopp, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 280, 220, 50));
 
         fech1.setBackground(new java.awt.Color(51, 255, 51));
         fech1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         fech1.setText("Minutos:");
-        getContentPane().add(fech1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 90, 30));
+        getContentPane().add(fech1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 80, 30));
 
         fech2.setBackground(new java.awt.Color(51, 255, 51));
         fech2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         fech2.setText("Horas:");
-        getContentPane().add(fech2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 70, 30));
+        getContentPane().add(fech2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 70, 30));
 
         minutt.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         minutt.setText("0");
@@ -271,14 +262,40 @@ public class mesa1 extends javax.swing.JFrame {
                 minuttKeyReleased(evt);
             }
         });
-        getContentPane().add(minutt, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 80, 30));
+        getContentPane().add(minutt, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 80, 30));
 
         prodMen.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        getContentPane().add(prodMen, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 220, 170, 20));
+        getContentPane().add(prodMen, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 380, 170, 20));
 
-        WALLP.setBackground(new java.awt.Color(255, 255, 255));
-        WALLP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mesa_principal.png"))); // NOI18N
-        getContentPane().add(WALLP, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 0, 1060, 590));
+        cerra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cerrar.png"))); // NOI18N
+        cerra.setBorder(null);
+        cerra.setBorderPainted(false);
+        cerra.setContentAreaFilled(false);
+        cerra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cerraActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cerra, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 70, 60));
+
+        otr.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        otr.setText("0");
+        otr.setEnabled(false);
+        getContentPane().add(otr, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, 90, 30));
+
+        ress.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ress.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Reiniciar.png"))); // NOI18N
+        ress.setContentAreaFilled(false);
+        ress.setEnabled(false);
+        ress.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ressActionPerformed(evt);
+            }
+        });
+        getContentPane().add(ress, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, 180, 50));
+
+        WALLP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mesas.png"))); // NOI18N
+        getContentPane().add(WALLP, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 890, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -294,7 +311,7 @@ public class mesa1 extends javax.swing.JFrame {
             inic.setEnabled(false);
 
         }
-        if (horas.getText().length() > 3) {
+        if (horas.getText().length() > 2) {
             horas.setText("");
             inic.setEnabled(false);
 
@@ -316,7 +333,6 @@ public class mesa1 extends javax.swing.JFrame {
         horas.setEnabled(false);
         inic.setEnabled(false);
         jbTotal.setEnabled(true);
-
         valTex();
 
         // TODO add your handling code here:
@@ -363,12 +379,46 @@ public class mesa1 extends javax.swing.JFrame {
                 prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
                 tot.setText(t);
                 break;
-             case "REFRESCO":
-                total += (20 * canti) ;
-                  t = String.valueOf(total);
-                prodMen.setText("se agrego " +  cantidad.getText() + " " + productos.getSelectedItem().toString()   );
+            case "REFRESCO":
+                total += (20 * canti);
+                t = String.valueOf(total);
+                prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
                 tot.setText(t);
                 break;
+            case "HOT DOG":
+                total += (20 * canti);
+                t = String.valueOf(total);
+                prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
+                tot.setText(t);
+                break;
+            case "SOPA INSTANTANEA":
+                total += (20 * canti);
+                t = String.valueOf(total);
+                prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
+                tot.setText(t);
+                break;
+            case "PALOMITAS":
+                total += (20 * canti);
+                t = String.valueOf(total);
+                prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
+                tot.setText(t);
+                break;
+            case "JUGOS":
+                total += (20 * canti);
+                t = String.valueOf(total);
+                prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
+                tot.setText(t);
+                break;
+            case "CERVESA":
+                total += (20 * canti);
+                t = String.valueOf(total);
+                prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
+                tot.setText(t);
+                break;
+            case "OTROS":
+                otr.setEnabled(true);
+                break;
+
             default:
                 throw new AssertionError();
         }
@@ -410,7 +460,7 @@ public class mesa1 extends javax.swing.JFrame {
 
         }
 
-        if (minutt.getText().length() > 3) {
+        if (minutt.getText().length() > 2) {
             minutt.setText("");
             inic.setEnabled(false);
 
@@ -433,10 +483,19 @@ public class mesa1 extends javax.swing.JFrame {
     }//GEN-LAST:event_totActionPerformed
 
     private void cerraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerraActionPerformed
-    
         this.setVisible(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_cerraActionPerformed
+
+    private void productosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productosActionPerformed
+
+    private void ressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ressActionPerformed
+
+   reIni();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ressActionPerformed
 
     /**
      * @param args the command line arguments
@@ -491,12 +550,13 @@ public class mesa1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JButton jbTotal;
     private javax.swing.JLabel mesaa;
     private javax.swing.JTextField minutt;
+    private javax.swing.JTextField otr;
     private javax.swing.JLabel prodMen;
     private javax.swing.JComboBox<String> productos;
+    private javax.swing.JButton ress;
     private javax.swing.JButton stopp;
     private javax.swing.JLabel tiempo;
     private javax.swing.JTextField tot;
@@ -574,6 +634,7 @@ public class mesa1 extends javax.swing.JFrame {
         String h = String.valueOf(hor);
 
         cronometro.setText(text);
+        crono();
     }
 // accion para el cronometro
     private ActionListener acciones = new ActionListener() {
@@ -689,6 +750,34 @@ public class mesa1 extends javax.swing.JFrame {
             min = 0;
             hor = 0;
         }
+
+    }
+
+    public void crono() {
+
+        if (hor == Integer.parseInt(horas.getText()) && min == Integer.parseInt(minutt.getText())) {
+
+            tie.stop();
+            JOptionPane.showMessageDialog(this, "se termini el tiempo " + mesaa.getText());
+            stopp.setEnabled(false);
+            ress.setEnabled(true);
+        }
+
+    }
+
+    public void reIni() {
+        horas.setText("0");
+        minutt.setText("0");
+        //stopp.setEnabled(false);
+        inic.setEnabled(true);
+        tie.stop();
+        horas.setEnabled(true);
+        minutt.setEnabled(true);
+        cente = 0;
+        seg = 0;
+        min = 0;
+        hor = 0;
+        ress.setEnabled(false);
 
     }
     // hola buenas noches

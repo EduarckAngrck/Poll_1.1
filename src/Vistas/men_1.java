@@ -13,6 +13,7 @@ import java.awt.Image;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
+import javax.swing.Icon;
 import javax.swing.JOptionPane;
 //import java.awt.Toolkit;
 //import javax.swing.JLabel;
@@ -42,6 +43,20 @@ public class men_1 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         botones = new ArrayList<>();
         indice = 1;
+        /*ImageIcon imgen = new ImageIcon(getClass().getResource("/img/0.png"));
+        Icon fond = new ImageIcon(imgen.getImage().getScaledInstance(Boton.getWidth(), Boton.getHeight(), Image.SCALE_DEFAULT));
+        Boton.setIcon(fond);
+        ImageIcon imen = new ImageIcon(getClass().getResource("/img/Ajustes.png"));
+        Icon ic = new ImageIcon(imen.getImage().getScaledInstance(aj.getWidth(), aj.getHeight(), Image.SCALE_DEFAULT));
+        aj.setIcon(ic);
+        ImageIcon imgn = new ImageIcon(getClass().getResource("/img/Help.png"));
+        Icon ay = new ImageIcon(imgn.getImage().getScaledInstance(hp.getWidth(), hp.getHeight(), Image.SCALE_DEFAULT));
+        hp.setIcon(ay);
+        ImageIcon im = new ImageIcon(getClass().getResource("/img/Acerca de.png"));
+        Icon a = new ImageIcon(im.getImage().getScaledInstance(ac.getWidth(), ac.getHeight(), Image.SCALE_DEFAULT));
+        ac.setIcon(a);*/
+        this.repaint();
+
 
     }
 
@@ -55,15 +70,15 @@ public class men_1 extends javax.swing.JFrame {
     private void initComponents() {
 
         Boton = new javax.swing.JButton();
+        Cerrar = new javax.swing.JButton();
+        Ajustes = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         panel = new fondo();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        hp = new javax.swing.JButton();
+        ac = new javax.swing.JButton();
         fechaa = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -79,75 +94,68 @@ public class men_1 extends javax.swing.JFrame {
                 BotonActionPerformed(evt);
             }
         });
-        getContentPane().add(Boton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 130, 150));
+        getContentPane().add(Boton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 120, 110));
+
+        Cerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cerrar-sesion.png"))); // NOI18N
+        Cerrar.setContentAreaFilled(false);
+        getContentPane().add(Cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 530, 220, 60));
+
+        Ajustes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Setting.png"))); // NOI18N
+        Ajustes.setToolTipText("");
+        Ajustes.setContentAreaFilled(false);
+        Ajustes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AjustesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Ajustes, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 100, 120));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lg.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 230, 170));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panel.setBackground(new java.awt.Color(255, 255, 255));
         panel.setLayout(new java.awt.GridLayout(0, 4));
-        jPanel1.add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 920, 540));
+        jPanel1.add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 730, 460));
 
         jScrollPane1.setViewportView(jPanel1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, 940, 560));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 750, 480));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Ajustes.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        hp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Help.png"))); // NOI18N
+        hp.setBorder(null);
+        hp.setBorderPainted(false);
+        hp.setContentAreaFilled(false);
+        hp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                hpActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 130, 140));
+        getContentPane().add(hp, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, 110, 110));
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Help.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        ac.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Acerca de.png"))); // NOI18N
+        ac.setBorder(null);
+        ac.setBorderPainted(false);
+        ac.setContentAreaFilled(false);
+        ac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                acActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, 130, 140));
+        getContentPane().add(ac, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 120, 130));
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Acerca de.png"))); // NOI18N
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setContentAreaFilled(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 140, 160));
+        fechaa.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        getContentPane().add(fechaa, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 70, 390, 40));
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cerrar-sesion.png"))); // NOI18N
-        jButton4.setContentAreaFilled(false);
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 570, -1, 70));
-
-        fechaa.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        getContentPane().add(fechaa, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 90, 300, 30));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/POOLBALL_LOGO.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 230, 190));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mesa_Iniciar.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-50, -20, 1450, 840));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mesa_Menu.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1190, 670));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActionPerformed
-       
+        mesa1 mesa = new mesa1();
         JButton boton = new JButton("" +indice);
         panel.add(boton);
         botones.add(boton);
@@ -155,7 +163,6 @@ public class men_1 extends javax.swing.JFrame {
         Image imagen = new ImageIcon(getClass().getResource("/img/bola.png")).getImage();
         int w = boton.getWidth() + 64;
         int h = boton.getHeight() + 64;
-        
 // jjjjj
 //boton.setBorder(null);
 //     ImageIcon imagen = new ImageIcon("m1.jpeg");
@@ -164,7 +171,6 @@ public class men_1 extends javax.swing.JFrame {
         boton.setBackground(Color.GREEN);
         indice++;
         panel.updateUI();
-        mesa1 mesa = new mesa1();
         boton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -181,29 +187,18 @@ public class men_1 extends javax.swing.JFrame {
 // TODO add your handling code here:
     }//GEN-LAST:event_BotonActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // Boton que abre los ajustes del programa
-        
-        ajustes newframe = new ajustes();
-        newframe.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void hpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hpActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_hpActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        //Informacion sobre la empresa y version del programa
-        Acerca_de newframe = new Acerca_de();
-        newframe.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void acActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acActionPerformed
+        JOptionPane.showMessageDialog(null, "PollBall - WORKING PROGRESS \nEmpresa: FrogSoft \nCorreo electronico: FrogSoft2023@gmail.com \nNumero de contacto: 5971145270 \nDirección: Calle 5 de Mayo, Sin Número, 9C, Tlahuelilpan Centro");
         // TODO add your handling code here:
-        Inicio_Pool newframe = new Inicio_Pool();
-        newframe.setVisible(Boolean.TRUE);
-        this.dispose();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_acActionPerformed
+
+    private void AjustesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjustesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AjustesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -241,12 +236,12 @@ public class men_1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Ajustes;
     private javax.swing.JButton Boton;
+    private javax.swing.JButton Cerrar;
+    private javax.swing.JButton ac;
     private javax.swing.JLabel fechaa;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton hp;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
@@ -258,6 +253,15 @@ public class men_1 extends javax.swing.JFrame {
     class fondo extends JPanel {
 
         private Image imagen;
+
+        @Override
+        public void paint(Graphics g) {
+
+            imagen = new ImageIcon(getClass().getResource("/img/Green.png")).getImage();
+            g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+            setOpaque(false);
+            super.paint(g);
+        }
 
     }
 

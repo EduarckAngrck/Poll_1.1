@@ -4,26 +4,28 @@
  */
 package Vistas;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author eduarckangrck
  */
 public class Inicio_Pool extends javax.swing.JFrame {
 
-    /*
+    /**
      * Creates new form Inicio_Pool
      */
-
-
     public Inicio_Pool() {
-
         
         initComponents();
         setLocationRelativeTo(null);
         inicia.setEnabled(false);
-        
+        ImageIcon imgen = new ImageIcon(getClass().getResource("/img/Mesa_principal.png"));
+        Icon fond = new ImageIcon(imgen.getImage().getScaledInstance(wallp1.getWidth(), wallp1.getHeight(), Image.SCALE_DEFAULT));
+        wallp1.setIcon(fond);
+        this.repaint();
         
     }
 
@@ -36,40 +38,28 @@ public class Inicio_Pool extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        Cerrar = new javax.swing.JButton();
         pass = new javax.swing.JPasswordField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         inicia = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
         user = new javax.swing.JTextField();
         message = new javax.swing.JLabel();
         wallp1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setName("FramePool"); // NOI18N
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cerrar.png"))); // NOI18N
-        jButton1.setToolTipText("Cerrar PollBall");
-        jButton1.setContentAreaFilled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Cerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cerrar.png"))); // NOI18N
+        Cerrar.setContentAreaFilled(false);
+        Cerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                CerrarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 70, 70));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/POOLBALL_LOGO.png"))); // NOI18N
-        jLabel1.setToolTipText("");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 60, 230, 180));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/User.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, -1, -1));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Pass.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, -1, -1));
+        getContentPane().add(Cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 70, 70));
 
         pass.setBackground(new java.awt.Color(178, 236, 160));
         pass.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -84,7 +74,15 @@ public class Inicio_Pool extends javax.swing.JFrame {
                 passKeyReleased(evt);
             }
         });
-        getContentPane().add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 410, 240, 50));
+        getContentPane().add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, 320, 50));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/User.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 80, 70));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lg.png"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, 230, 150));
 
         inicia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/log1.png"))); // NOI18N
         inicia.setBorder(null);
@@ -94,11 +92,16 @@ public class Inicio_Pool extends javax.swing.JFrame {
                 iniciaActionPerformed(evt);
             }
         });
-        getContentPane().add(inicia, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 350, 90, 70));
+        getContentPane().add(inicia, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 350, 90, 70));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 51, 255));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Pass.png"))); // NOI18N
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, 80, 70));
 
         user.setBackground(new java.awt.Color(178, 236, 160));
         user.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        user.setToolTipText("User");
+        user.setToolTipText("Usuario");
         user.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userActionPerformed(evt);
@@ -109,13 +112,13 @@ public class Inicio_Pool extends javax.swing.JFrame {
                 userKeyReleased(evt);
             }
         });
-        getContentPane().add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, 240, 50));
+        getContentPane().add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, 320, 50));
 
         message.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        getContentPane().add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, 390, 30));
+        getContentPane().add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, 390, 30));
 
         wallp1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mesa_principal.png"))); // NOI18N
-        getContentPane().add(wallp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 10, 1060, 570));
+        getContentPane().add(wallp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1040, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -126,10 +129,9 @@ public class Inicio_Pool extends javax.swing.JFrame {
     }//GEN-LAST:event_passActionPerformed
 
     private void iniciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciaActionPerformed
-        
-        men_1 men = new men_1();
-        men.setVisible(true);
-        this.setVisible(false);
+men_1 men = new men_1();
+men.setVisible(true);
+this.setVisible(false);
 //hola carlos  
         // TODO add your handling code here:
     }//GEN-LAST:event_iniciaActionPerformed
@@ -149,11 +151,10 @@ public class Inicio_Pool extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_passKeyReleased
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarActionPerformed
         // TODO add your handling code here:
-        this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
-    
+    }//GEN-LAST:event_CerrarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -182,22 +183,19 @@ public class Inicio_Pool extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-
         java.awt.EventQueue.invokeLater(new Runnable() {
-
             public void run() {
                 new Inicio_Pool().setVisible(true);
-
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Cerrar;
     private javax.swing.JButton inicia;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel message;
     private javax.swing.JPasswordField pass;
     private javax.swing.JTextField user;
