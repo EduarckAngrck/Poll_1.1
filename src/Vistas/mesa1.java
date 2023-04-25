@@ -43,12 +43,13 @@ public class mesa1 extends javax.swing.JFrame {
         ImageIcon image = new ImageIcon(getClass().getResource("/img/0.png"));
         Icon bott = new ImageIcon(image.getImage().getScaledInstance(agree.getWidth(), agree.getHeight(), Image.SCALE_DEFAULT));
         agree.setIcon(bott);
-         ImageIcon imag = new ImageIcon(getClass().getResource("/img/cerrar.png"));
+        ImageIcon imag = new ImageIcon(getClass().getResource("/img/cerrar.png"));
         Icon cerr = new ImageIcon(imag.getImage().getScaledInstance(cerra.getWidth(), cerra.getHeight(), Image.SCALE_DEFAULT));
         cerra.setIcon(cerr);
         this.repaint();
         tot.setEditable(false);
-        
+        crono();
+
     }
 
     /**
@@ -83,6 +84,7 @@ public class mesa1 extends javax.swing.JFrame {
         minutt = new javax.swing.JTextField();
         prodMen = new javax.swing.JLabel();
         cerra = new javax.swing.JButton();
+        otr = new javax.swing.JTextField();
         WALLP = new javax.swing.JLabel();
 
         jLabel4.setText("jLabel4");
@@ -106,7 +108,12 @@ public class mesa1 extends javax.swing.JFrame {
 
         productos.setBackground(new java.awt.Color(102, 255, 102));
         productos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        productos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PAPAS", "REFRESCO", "SOPA INSTANTANEA ", "PALOMITAS ", "JUGOS", "CERVESA ", "HOT DOG ", " ", " " }));
+        productos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PAPAS", "REFRESCO", "SOPA INSTANTANEA ", "PALOMITAS ", "JUGOS", "CERVESA ", "HOT DOG ", "OTROS", " " }));
+        productos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                productosActionPerformed(evt);
+            }
+        });
         getContentPane().add(productos, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, -1, -1));
 
         cantidad.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -120,7 +127,7 @@ public class mesa1 extends javax.swing.JFrame {
                 cantidadKeyReleased(evt);
             }
         });
-        getContentPane().add(cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 220, 80, 30));
+        getContentPane().add(cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, 80, 30));
 
         agree.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         agree.setBorder(null);
@@ -132,7 +139,7 @@ public class mesa1 extends javax.swing.JFrame {
                 agreeActionPerformed(evt);
             }
         });
-        getContentPane().add(agree, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, 80, 80));
+        getContentPane().add(agree, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 290, 80, 80));
 
         tot.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         tot.addActionListener(new java.awt.event.ActionListener() {
@@ -176,7 +183,7 @@ public class mesa1 extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setText("CANTIDAD ");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setText("CRONOMETRO");
@@ -261,6 +268,11 @@ public class mesa1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cerra, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
+
+        otr.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        otr.setText("0");
+        otr.setEnabled(false);
+        getContentPane().add(otr, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, 90, 30));
         getContentPane().add(WALLP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 410));
 
         pack();
@@ -346,12 +358,46 @@ public class mesa1 extends javax.swing.JFrame {
                 prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
                 tot.setText(t);
                 break;
-             case "REFRESCO":
-                total += (20 * canti) ;
-                  t = String.valueOf(total);
-                prodMen.setText("se agrego " +  cantidad.getText() + " " + productos.getSelectedItem().toString()   );
+            case "REFRESCO":
+                total += (20 * canti);
+                t = String.valueOf(total);
+                prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
                 tot.setText(t);
                 break;
+            case "HOT DOG":
+                total += (20 * canti);
+                t = String.valueOf(total);
+                prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
+                tot.setText(t);
+                break;
+            case "SOPA INSTANTANEA":
+                total += (20 * canti);
+                t = String.valueOf(total);
+                prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
+                tot.setText(t);
+                break;
+            case "PALOMITAS":
+                total += (20 * canti);
+                t = String.valueOf(total);
+                prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
+                tot.setText(t);
+                break;
+            case "JUGOS":
+                total += (20 * canti);
+                t = String.valueOf(total);
+                prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
+                tot.setText(t);
+                break;
+            case "CERVESA":
+                total += (20 * canti);
+                t = String.valueOf(total);
+                prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
+                tot.setText(t);
+                break;
+            case "OTROS":
+                 otr.setEnabled(true);
+                break;
+
             default:
                 throw new AssertionError();
         }
@@ -416,9 +462,13 @@ public class mesa1 extends javax.swing.JFrame {
     }//GEN-LAST:event_totActionPerformed
 
     private void cerraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerraActionPerformed
-this.setVisible(false);
+        this.setVisible(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_cerraActionPerformed
+
+    private void productosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -475,6 +525,7 @@ this.setVisible(false);
     private javax.swing.JButton jbTotal;
     private javax.swing.JLabel mesaa;
     private javax.swing.JTextField minutt;
+    private javax.swing.JTextField otr;
     private javax.swing.JLabel prodMen;
     private javax.swing.JComboBox<String> productos;
     private javax.swing.JButton stopp;
@@ -670,6 +721,16 @@ this.setVisible(false);
             hor = 0;
         }
 
+    }
+    
+    
+    public void crono(){
+  
+        if (hor == Integer.parseInt(horas.getText()) && min == Integer.parseInt(minutt.getText())) {
+            tie.stop();
+            JOptionPane.showMessageDialog(this, "se termini el tiempo");
+        }
+    
     }
     // hola buenas noches
 }
