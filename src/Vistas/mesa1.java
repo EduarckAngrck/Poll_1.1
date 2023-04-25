@@ -730,7 +730,8 @@ public class mesa1 extends javax.swing.JFrame {
         if (hor == Integer.parseInt(horas.getText()) && min == Integer.parseInt(minutt.getText())) {
             
             tie.stop();
-            JOptionPane.showMessageDialog(this, "se termini el tiempo"+ mesaa.getText());
+            JOptionPane.showMessageDialog(this, "se termini el tiempo "+ mesaa.getText());
+            stopp.setEnabled(false);
         }
     
     }
