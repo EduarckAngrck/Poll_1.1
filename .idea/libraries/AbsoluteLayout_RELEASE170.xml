@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="AbsoluteLayout-RELEASE170">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/build/classes/dependencias/AbsoluteLayout-RELEASE170.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/dependencias/AbsoluteLayout-RELEASE170.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
