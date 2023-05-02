@@ -40,6 +40,13 @@ DefaultTableModel dtm = new DefaultTableModel();
   dtm.setValueAt(txtId.getText(), fila, 0);
   dtm.setValueAt(txtPres.getText(), fila, 1);
   dtm.setValueAt(txtProd.getText(), fila, 2);
+  } 
+  void limpiar(){
+  int filas = dtm.getRowCount();
+      for (int i = 0; i < filas; i++) {
+          dtm.removeRow(0);
+          
+      }
   }
     /**
      * This method is called from within the constructor to initialize the form.
