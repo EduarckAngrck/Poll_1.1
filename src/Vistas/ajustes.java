@@ -20,7 +20,7 @@ DefaultTableModel dtm = new DefaultTableModel();
      */
     public ajustes() {
         initComponents();
-        String[] titulo = new String[]{"id", "Presio", "Producto"};
+        String[] titulo = new String[]{"id", "Precio", "Producto"};
         dtm.setColumnIdentifiers(titulo);
         tbDatos.setModel(dtm);
     }
@@ -79,6 +79,11 @@ DefaultTableModel dtm = new DefaultTableModel();
                 txtIdActionPerformed(evt);
             }
         });
+        txtId.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtIdKeyReleased(evt);
+            }
+        });
         getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, 130, 50));
 
         actualizar.setText("Actualizar");
@@ -112,6 +117,12 @@ DefaultTableModel dtm = new DefaultTableModel();
             }
         });
         getContentPane().add(elimina, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 130, 40));
+
+        txtPres.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPresKeyReleased(evt);
+            }
+        });
         getContentPane().add(txtPres, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 60, 130, 50));
         getContentPane().add(txtProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 60, 130, 50));
 
@@ -133,7 +144,7 @@ DefaultTableModel dtm = new DefaultTableModel();
         jLabel1.setText("id Producto");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, 110, 30));
 
-        jLabel2.setText("Presio");
+        jLabel2.setText("Precio");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 20, 120, 30));
 
         jLabel3.setText("Producto");
@@ -168,6 +179,16 @@ agregar();        // TODO add your handling code here:
     private void eliminaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminaActionPerformed
 eliminar();        // TODO add your handling code here:
     }//GEN-LAST:event_eliminaActionPerformed
+
+    private void txtIdKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdKeyReleased
+        val(txtId.getText());        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIdKeyReleased
+
+    private void txtPresKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPresKeyReleased
+
+        valPres(txtPres.getText());
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPresKeyReleased
 
     /**
      * @param args the command line arguments
@@ -220,6 +241,41 @@ eliminar();        // TODO add your handling code here:
     private javax.swing.JTextField txtProd;
     // End of variables declaration//GEN-END:variables
 
+  public void val(String num) {
 
+        if (num.length() > 0 && num.length()< 8) {
 
+            for (int i = 0; i < num.length(); i++) {
+                char c = num.charAt(i);
+                if (!Character.isDigit(c)) {
+                    txtId.setText("0");
+
+                }
+
+            }
+
+        } else {
+            txtId.setText("0");
+        }
+
+    }
+public void valPres(String num) {
+
+        if (num.length() > 0 && num.length()< 8) {
+
+            for (int i = 0; i < num.length(); i++) {
+                char c = num.charAt(i);
+                if (Character.isDigit(c)|| c == '.') {
+                    txtPres.setText(num);
+
+                }else{
+                txtPres.setText("0");}
+
+            }
+
+        } else {
+            txtPres.setText("0");
+        }
+
+    }
 }
