@@ -4,17 +4,20 @@
  */
 package Vistas;
 
-import java.awt.Graphics;
-import java.awt.Image;
-import javax.swing.ImageIcon;
-import javax.swing.JPanel;
+//import java.awt.Graphics;
+//import java.awt.Image;
+//import javax.swing.ImageIcon;
+//import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author eduarckangrck
  */
 public class ajustes extends javax.swing.JFrame {
-DefaultTableModel dtm = new DefaultTableModel();
+
+    DefaultTableModel dtm = new DefaultTableModel();
+
     /**
      * Creates new form ajustes
      */
@@ -24,30 +27,35 @@ DefaultTableModel dtm = new DefaultTableModel();
         dtm.setColumnIdentifiers(titulo);
         tbDatos.setModel(dtm);
     }
-  void agregar(){
-  dtm.addRow(new Object[]{
-  txtId.getText(), txtPres.getText(), txtProd.getText()
-  });
-  
-  }
-  void eliminar(){
-      int fila = tbDatos.getSelectedRow();
-  dtm.removeRow(fila);
-  
-  }
-  void actualizar(){
-  int fila = tbDatos.getSelectedRow();
-  dtm.setValueAt(txtId.getText(), fila, 0);
-  dtm.setValueAt(txtPres.getText(), fila, 1);
-  dtm.setValueAt(txtProd.getText(), fila, 2);
-  } 
-  void limpiar(){
-  int filas = dtm.getRowCount();
-      for (int i = 0; i < filas; i++) {
-          dtm.removeRow(0);
-          
-      }
-  }
+
+    void agregar() {
+        dtm.addRow(new Object[]{
+            txtId.getText(), txtPres.getText(), txtProd.getText()
+        });
+
+    }
+
+    void eliminar() {
+        int fila = tbDatos.getSelectedRow();
+        dtm.removeRow(fila);
+
+    }
+
+    void actualizar() {
+        int fila = tbDatos.getSelectedRow();
+        dtm.setValueAt(txtId.getText(), fila, 0);
+        dtm.setValueAt(txtPres.getText(), fila, 1);
+        dtm.setValueAt(txtProd.getText(), fila, 2);
+    }
+
+    void limpiar() {
+        int filas = dtm.getRowCount();
+        for (int i = 0; i < filas; i++) {
+            dtm.removeRow(0);
+
+        }
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -69,6 +77,7 @@ DefaultTableModel dtm = new DefaultTableModel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jLabel_fond = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -149,6 +158,17 @@ DefaultTableModel dtm = new DefaultTableModel();
 
         jLabel3.setText("Producto");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 20, 110, 30));
+
+        jButton1.setText("salir");
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 100, 80));
         getContentPane().add(jLabel_fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -80, 980, 590));
 
         pack();
@@ -156,20 +176,17 @@ DefaultTableModel dtm = new DefaultTableModel();
 
     private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
 
-
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIdActionPerformed
 
     private void actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarActionPerformed
-actualizar();
-      
-
+        actualizar();
 
         // TODO add your handling code here:
     }//GEN-LAST:event_actualizarActionPerformed
 
     private void agregaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregaActionPerformed
-agregar();        // TODO add your handling code here:
+        agregar();        // TODO add your handling code here:
     }//GEN-LAST:event_agregaActionPerformed
 
     private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
@@ -177,7 +194,7 @@ agregar();        // TODO add your handling code here:
     }//GEN-LAST:event_limpiarActionPerformed
 
     private void eliminaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminaActionPerformed
-eliminar();        // TODO add your handling code here:
+        eliminar();        // TODO add your handling code here:
     }//GEN-LAST:event_eliminaActionPerformed
 
     private void txtIdKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdKeyReleased
@@ -189,6 +206,13 @@ eliminar();        // TODO add your handling code here:
         valPres(txtPres.getText());
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPresKeyReleased
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        men_1 mes = new men_1();
+        mes.setVisible(true);
+        this.setVisible(false );        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -229,6 +253,7 @@ eliminar();        // TODO add your handling code here:
     private javax.swing.JButton actualizar;
     private javax.swing.JButton agrega;
     private javax.swing.JButton elimina;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -241,9 +266,9 @@ eliminar();        // TODO add your handling code here:
     private javax.swing.JTextField txtProd;
     // End of variables declaration//GEN-END:variables
 
-  public void val(String num) {
+    public void val(String num) {
 
-        if (num.length() > 0 && num.length()< 8) {
+        if (num.length() > 0 && num.length() < 8) {
 
             for (int i = 0; i < num.length(); i++) {
                 char c = num.charAt(i);
@@ -259,17 +284,19 @@ eliminar();        // TODO add your handling code here:
         }
 
     }
-public void valPres(String num) {
 
-        if (num.length() > 0 && num.length()< 8) {
+    public void valPres(String num) {
+
+        if (num.length() > 0 && num.length() < 8) {
 
             for (int i = 0; i < num.length(); i++) {
                 char c = num.charAt(i);
-                if (Character.isDigit(c)|| c == '.') {
+                if (Character.isDigit(c) || c == '.') {
                     txtPres.setText(num);
 
-                }else{
-                txtPres.setText("0");}
+                } else {
+                    txtPres.setText("0");
+                }
 
             }
 
