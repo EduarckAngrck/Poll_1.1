@@ -32,6 +32,8 @@ public class ajustes extends javax.swing.JFrame {
 
         jTextField1 = new javax.swing.JTextField();
         agregar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jLabel_fond = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -42,7 +44,7 @@ public class ajustes extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 130, 50));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 130, 50));
 
         agregar.setText("agregar");
         agregar.addActionListener(new java.awt.event.ActionListener() {
@@ -50,10 +52,25 @@ public class ajustes extends javax.swing.JFrame {
                 agregarActionPerformed(evt);
             }
         });
-        getContentPane().add(agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 100, 50));
+        getContentPane().add(agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 100, 50));
 
-        jLabel_fond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mesa_Menu.png"))); // NOI18N
-        getContentPane().add(jLabel_fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 1220, 680));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, -1, -1));
+
+        jLabel_fond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pol1.jpeg"))); // NOI18N
+        getContentPane().add(jLabel_fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, 987, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -110,6 +127,8 @@ public class ajustes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton agregar;
     private javax.swing.JLabel jLabel_fond;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
