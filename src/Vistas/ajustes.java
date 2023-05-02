@@ -8,19 +8,39 @@ import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author eduarckangrck
  */
 public class ajustes extends javax.swing.JFrame {
-
+DefaultTableModel dtm = new DefaultTableModel();
     /**
      * Creates new form ajustes
      */
     public ajustes() {
         initComponents();
+        String[] titulo = new String[]{"id", "Presio", "Producto"};
+        dtm.setColumnIdentifiers(titulo);
+        tbDatos.setModel(dtm);
     }
-
+  void agregar(){
+  dtm.addRow(new Object[]{
+  txtId.getText(), txtPres.getText(), txtProd.getText()
+  });
+  
+  }
+  void eliminar(){
+      int fila = tbDatos.getSelectedRow();
+  dtm.removeRow(fila);
+  
+  }
+  void actualizar(){
+  int fila = tbDatos.getSelectedRow();
+  dtm.setValueAt(txtId.getText(), fila, 0);
+  dtm.setValueAt(txtPres.getText(), fila, 1);
+  dtm.setValueAt(txtProd.getText(), fila, 2);
+  }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,47 +50,117 @@ public class ajustes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
-        agregar = new javax.swing.JButton();
+        txtId = new javax.swing.JTextField();
+        actualizar = new javax.swing.JButton();
+        agrega = new javax.swing.JButton();
+        limpiar = new javax.swing.JButton();
+        elimina = new javax.swing.JButton();
+        txtPres = new javax.swing.JTextField();
+        txtProd = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tbDatos = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel_fond = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtIdActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 130, 50));
+        getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, 130, 50));
 
-        agregar.setText("agregar");
-        agregar.addActionListener(new java.awt.event.ActionListener() {
+        actualizar.setText("Actualizar");
+        actualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                agregarActionPerformed(evt);
+                actualizarActionPerformed(evt);
             }
         });
-        getContentPane().add(agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 100, 50));
+        getContentPane().add(actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 130, 130, 40));
 
-        jLabel_fond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pol1.jpeg"))); // NOI18N
-        getContentPane().add(jLabel_fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -20, 987, 580));
+        agrega.setText("agregar");
+        agrega.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(agrega, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, 130, 40));
+
+        limpiar.setText("Limpiar");
+        limpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limpiarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 130, 130, 40));
+
+        elimina.setText("Eliminar");
+        elimina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(elimina, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 130, 40));
+        getContentPane().add(txtPres, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 60, 130, 50));
+        getContentPane().add(txtProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 60, 130, 50));
+
+        tbDatos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tbDatos);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, 600, 250));
+
+        jLabel1.setText("id Producto");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, 110, 30));
+
+        jLabel2.setText("Presio");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 20, 120, 30));
+
+        jLabel3.setText("Producto");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 20, 110, 30));
+        getContentPane().add(jLabel_fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -80, 980, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
 
 
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtIdActionPerformed
 
-    private void agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarActionPerformed
-      
+    private void actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarActionPerformed
+actualizar();
       
 
 
         // TODO add your handling code here:
-    }//GEN-LAST:event_agregarActionPerformed
+    }//GEN-LAST:event_actualizarActionPerformed
+
+    private void agregaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregaActionPerformed
+agregar();        // TODO add your handling code here:
+    }//GEN-LAST:event_agregaActionPerformed
+
+    private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_limpiarActionPerformed
+
+    private void eliminaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminaActionPerformed
+eliminar();        // TODO add your handling code here:
+    }//GEN-LAST:event_eliminaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -108,9 +198,19 @@ public class ajustes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton agregar;
+    private javax.swing.JButton actualizar;
+    private javax.swing.JButton agrega;
+    private javax.swing.JButton elimina;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel_fond;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton limpiar;
+    private javax.swing.JTable tbDatos;
+    private javax.swing.JTextField txtId;
+    private javax.swing.JTextField txtPres;
+    private javax.swing.JTextField txtProd;
     // End of variables declaration//GEN-END:variables
 
 
