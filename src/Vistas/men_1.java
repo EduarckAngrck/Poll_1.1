@@ -54,8 +54,8 @@ public class men_1 extends javax.swing.JFrame {
         hp.setIcon(ay);
         ImageIcon im = new ImageIcon(getClass().getResource("/img/Acerca de.png"));
         Icon a = new ImageIcon(im.getImage().getScaledInstance(ac.getWidth(), ac.getHeight(), Image.SCALE_DEFAULT));
-        ac.setIcon(a);
-        this.repaint();*/
+        ac.setIcon(a);*/
+        this.repaint();
 
 
     }
