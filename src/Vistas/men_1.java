@@ -43,7 +43,7 @@ public class men_1 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         botones = new ArrayList<>();
         indice = 1;
-        ImageIcon imgen = new ImageIcon(getClass().getResource("/img/0.png"));
+       /* ImageIcon imgen = new ImageIcon(getClass().getResource("/img/0.png"));
         Icon fond = new ImageIcon(imgen.getImage().getScaledInstance(Boton.getWidth(), Boton.getHeight(), Image.SCALE_DEFAULT));
         Boton.setIcon(fond);
         ImageIcon imen = new ImageIcon(getClass().getResource("/img/Ajustes.png"));
@@ -55,7 +55,7 @@ public class men_1 extends javax.swing.JFrame {
         ImageIcon im = new ImageIcon(getClass().getResource("/img/Acerca de.png"));
         Icon a = new ImageIcon(im.getImage().getScaledInstance(ac.getWidth(), ac.getHeight(), Image.SCALE_DEFAULT));
         ac.setIcon(a);
-        this.repaint();
+        this.repaint();*/
 
 
     }
