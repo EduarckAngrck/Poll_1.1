@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ajustes extends javax.swing.JFrame {
 
-    DefaultTableModel dtm = new DefaultTableModel();
+   // DefaultTableModel dtm = new DefaultTableModel();
     
 
     /**
@@ -26,15 +26,15 @@ public class ajustes extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         String[] titulo = new String[]{"id", "Precio", "Producto"};
-        dtm.setColumnIdentifiers(titulo);
-        tbDatos.setModel(dtm);
+       // dtm.setColumnIdentifiers(titulo);
+        //tbDatos.setModel(dtm);
     }
 
-    void agregar() {
+   /* void agregar() {
         dtm.addRow(new Object[]{
             txtId.getText(), txtPres.getText(), txtProd.getText()
         });
-   mesa1 mes = new mesa1();
+  mesa1 mes = new mesa1();
         mes.agree(txtProd.getText());
     }
 
@@ -58,7 +58,7 @@ public class ajustes extends javax.swing.JFrame {
             dtm.removeRow(0);
 
         }
-    }
+    }*/
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -69,103 +69,32 @@ public class ajustes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtId = new javax.swing.JTextField();
-        actualizar = new javax.swing.JButton();
-        agrega = new javax.swing.JButton();
-        limpiar = new javax.swing.JButton();
-        elimina = new javax.swing.JButton();
-        txtPres = new javax.swing.JTextField();
-        txtProd = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tbDatos = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        r = new javax.swing.JTextField();
+        s = new javax.swing.JTextField();
+        j = new javax.swing.JTextField();
+        pa = new javax.swing.JTextField();
+        c = new javax.swing.JTextField();
+        p = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jButton2 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        h = new javax.swing.JTextField();
         jLabel_fond = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txtId.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIdActionPerformed(evt);
-            }
-        });
-        txtId.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtIdKeyReleased(evt);
-            }
-        });
-        getContentPane().add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, 130, 50));
-
-        actualizar.setText("Actualizar");
-        actualizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                actualizarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 130, 40));
-
-        agrega.setText("Agregar");
-        agrega.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                agregaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(agrega, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, 130, 40));
-
-        limpiar.setText("Limpiar");
-        limpiar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                limpiarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 190, 130, 40));
-
-        elimina.setText("Eliminar");
-        elimina.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eliminaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(elimina, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, 130, 40));
-
-        txtPres.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtPresKeyReleased(evt);
-            }
-        });
-        getContentPane().add(txtPres, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 120, 130, 50));
-        getContentPane().add(txtProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 120, 130, 50));
-
-        tbDatos.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(tbDatos);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 600, 250));
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("ID De Producto");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 80, 150, 30));
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setText("Precio");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 80, 60, 30));
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel3.setText("Producto");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 80, 110, 30));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Regresar.png"))); // NOI18N
         jButton1.setToolTipText("Regresar a la ventana anterior");
@@ -179,51 +108,113 @@ public class ajustes extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 150, 80));
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setText("SOPA INSTANTANEA:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, 210, 20));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel5.setText("JUGOS:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 270, 80, 20));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setText("PALOMITAS:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 310, 130, -1));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel7.setText("CERVESA:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 350, 100, 30));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel9.setText("REFRESCO:");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 200, 120, 20));
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel10.setText("Hot Dog :");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 390, 110, -1));
+
+        r.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        r.setText("30");
+        getContentPane().add(r, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 120, -1));
+
+        s.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        s.setText("30");
+        getContentPane().add(s, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 230, 120, -1));
+
+        j.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        j.setText("30");
+        getContentPane().add(j, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 270, 120, -1));
+
+        pa.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        pa.setText("30");
+        getContentPane().add(pa, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 310, 120, -1));
+
+        c.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        c.setText("30");
+        getContentPane().add(c, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 350, 120, -1));
+
+        p.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        p.setText("30");
+        getContentPane().add(p, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 150, 120, -1));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("PRODUCTOS");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, 120, 30));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setText("Usuario :");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 90, 40));
+
+        jTextField7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jTextField7.setText("admin");
+        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 110, -1));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setText("Contraseña :");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, -1, -1));
+
+        jPasswordField1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jPasswordField1.setText("12345");
+        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 130, 40));
+
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton2.setText("Actualizar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 430, 140, 40));
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel11.setText("PAPAS:");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 110, -1));
+
+        h.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        h.setText("30");
+        getContentPane().add(h, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 390, 120, 30));
+
         jLabel_fond.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mesa_principal.png"))); // NOI18N
         getContentPane().add(jLabel_fond, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtIdActionPerformed
-
-    private void actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarActionPerformed
-        actualizar();
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_actualizarActionPerformed
-
-    private void agregaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregaActionPerformed
-        
-        agregar();    
-        // TODO add your handling code here:
-    }//GEN-LAST:event_agregaActionPerformed
-
-    private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
-
-limpiar();        // TODO add your handling code here:
-    }//GEN-LAST:event_limpiarActionPerformed
-
-    private void eliminaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminaActionPerformed
-        eliminar();        // TODO add your handling code here:
-    }//GEN-LAST:event_eliminaActionPerformed
-
-    private void txtIdKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdKeyReleased
-        val(txtId.getText());        // TODO add your handling code here:
-    }//GEN-LAST:event_txtIdKeyReleased
-
-    private void txtPresKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPresKeyReleased
-
-        valPres(txtPres.getText());
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPresKeyReleased
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     this.setVisible(false );        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+      mesa1 mes = new mesa1();
+        mes.setP(p.getText());
+        mes.setH(h.getText());
+        mes.setPa(pa.getText());
+        mes.setJ(j.getText());
+        mes.setR(r.getText());
+        mes.setC(c.getText());
+        mes.setS(s.getText());
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -261,23 +252,31 @@ limpiar();        // TODO add your handling code here:
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton actualizar;
-    private javax.swing.JButton agrega;
-    private javax.swing.JButton elimina;
+    private javax.swing.JTextField c;
+    private javax.swing.JTextField h;
+    private javax.swing.JTextField j;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabel_fond;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton limpiar;
-    private javax.swing.JTable tbDatos;
-    private javax.swing.JTextField txtId;
-    private javax.swing.JTextField txtPres;
-    private javax.swing.JTextField txtProd;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField p;
+    private javax.swing.JTextField pa;
+    private javax.swing.JTextField r;
+    private javax.swing.JTextField s;
     // End of variables declaration//GEN-END:variables
 
-    public void val(String num) {
+   /* public void val(String num) {
 
         if (num.length() > 0 && num.length() < 8) {
 
@@ -315,5 +314,5 @@ limpiar();        // TODO add your handling code here:
             txtPres.setText("0");
         }
 
-    }
+    }*/
 }

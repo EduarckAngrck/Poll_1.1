@@ -32,7 +32,9 @@ public class mesa1 extends javax.swing.JFrame {
     private String dato;
     private String fechaa;
     private String prod;
-    DefaultComboBoxModel modeloCombo = new DefaultComboBoxModel();
+       private String p , s, r,pa,j, c, h;
+    
+    //DefaultComboBoxModel modeloCombo = new DefaultComboBoxModel();
     
 
     /**
@@ -91,7 +93,6 @@ public class mesa1 extends javax.swing.JFrame {
         prodMen = new javax.swing.JLabel();
         cerra = new javax.swing.JButton();
         ress = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         WALLP = new javax.swing.JLabel();
 
         jLabel4.setText("jLabel4");
@@ -115,7 +116,7 @@ public class mesa1 extends javax.swing.JFrame {
 
         productos.setBackground(new java.awt.Color(102, 255, 102));
         productos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        productos.setModel(modeloCombo);
+        productos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PAPAS", "REFRESCO", "HOT DOG", "SOPA INSTANTANEA", "PALOMITAS", "JUGOS", "CERVESA", "OTROS" }));
         productos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productosActionPerformed(evt);
@@ -159,8 +160,8 @@ public class mesa1 extends javax.swing.JFrame {
         getContentPane().add(tot, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 350, 100, 40));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel5.setText("Extra (En dinero)");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, -1, -1));
+        jLabel5.setText("Otro Prdoducto O Extra (En dinero)");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, 350, -1));
 
         extra.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         extra.setText("00");
@@ -294,14 +295,6 @@ public class mesa1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(ress, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, 180, 50));
-
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 140, -1, -1));
 
         WALLP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mesas.png"))); // NOI18N
         getContentPane().add(WALLP, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 890, 490));
@@ -507,11 +500,6 @@ public class mesa1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ressActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
- modeloCombo.addElement(prod);
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -559,7 +547,6 @@ public class mesa1 extends javax.swing.JFrame {
     private javax.swing.JLabel fech2;
     private javax.swing.JTextField horas;
     private javax.swing.JButton inic;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
@@ -797,10 +784,45 @@ public class mesa1 extends javax.swing.JFrame {
         ress.setEnabled(false);
 
     }
-    public void agree(String il){
+    public void setP(String dato) {
+        this.p= dato;
+       
+
+    }
+    public void setR(String dato) {
+        this.r = dato;
+        
+
+    }
+    public void setPa(String dato) {
+        this.pa = dato;
+      
+
+    }
+    public void setH(String dato) {
+        this.h = dato;
+        
+
+    }
+    public void setJ(String dato) {
+        this.j = dato;
+       
+
+    }
+    public void setC(String dato) {
+        this.c = dato;
+       
+
+    }
+    public void setS(String dato) {
+        this.s = dato;
+        
+
+    }
+    /*public void agree(String il){
        this.prod = il;
         
       
-    }
+    }*/
     // hola buenas noches
 }
