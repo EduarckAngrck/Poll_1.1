@@ -84,7 +84,6 @@ public class mesa1 extends javax.swing.JFrame {
         minutt = new javax.swing.JTextField();
         prodMen = new javax.swing.JLabel();
         cerra = new javax.swing.JButton();
-        otr = new javax.swing.JTextField();
         ress = new javax.swing.JButton();
         WALLP = new javax.swing.JLabel();
 
@@ -109,7 +108,7 @@ public class mesa1 extends javax.swing.JFrame {
 
         productos.setBackground(new java.awt.Color(102, 255, 102));
         productos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        productos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PAPAS", "REFRESCO", "SOPA INSTANTANEA ", "PALOMITAS ", "JUGOS", "CERVESA ", "HOT DOG ", "OTROS", " " }));
+        productos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PAPAS", "REFRESCO", "SOPA INSTANTANEA ", "PALOMITAS ", "JUGOS", "CERVESA ", "HOT DOG ", " " }));
         productos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productosActionPerformed(evt);
@@ -193,7 +192,7 @@ public class mesa1 extends javax.swing.JFrame {
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, -1));
 
         tiempo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        getContentPane().add(tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 370, 240, 30));
+        getContentPane().add(tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, 240, 30));
 
         mesaa.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         getContentPane().add(mesaa, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, 140, 40));
@@ -265,7 +264,7 @@ public class mesa1 extends javax.swing.JFrame {
         getContentPane().add(minutt, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 80, 30));
 
         prodMen.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        getContentPane().add(prodMen, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 380, 170, 20));
+        getContentPane().add(prodMen, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 170, 20));
 
         cerra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cerrar.png"))); // NOI18N
         cerra.setBorder(null);
@@ -277,11 +276,6 @@ public class mesa1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(cerra, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 70, 60));
-
-        otr.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        otr.setText("0");
-        otr.setEnabled(false);
-        getContentPane().add(otr, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, 90, 30));
 
         ress.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ress.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Reiniciar.png"))); // NOI18N
@@ -416,7 +410,7 @@ public class mesa1 extends javax.swing.JFrame {
                 tot.setText(t);
                 break;
             case "OTROS":
-                otr.setEnabled(true);
+                //otr.setEnabled(true);
                 break;
 
             default:
@@ -553,7 +547,6 @@ public class mesa1 extends javax.swing.JFrame {
     private javax.swing.JButton jbTotal;
     private javax.swing.JLabel mesaa;
     private javax.swing.JTextField minutt;
-    private javax.swing.JTextField otr;
     private javax.swing.JLabel prodMen;
     private javax.swing.JComboBox<String> productos;
     private javax.swing.JButton ress;
