@@ -264,7 +264,7 @@ public class mesa1 extends javax.swing.JFrame {
         getContentPane().add(minutt, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 80, 30));
 
         prodMen.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        getContentPane().add(prodMen, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 170, 20));
+        getContentPane().add(prodMen, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 240, 20));
 
         cerra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cerrar.png"))); // NOI18N
         cerra.setBorder(null);
@@ -403,18 +403,16 @@ public class mesa1 extends javax.swing.JFrame {
                 prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
                 tot.setText(t);
                 break;
-            case "CERVESA":
-                total += (20 * canti);
-                t = String.valueOf(total);
-                prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
-                tot.setText(t);
+            case "":
+                 JOptionPane.showMessageDialog(null, "Seleccionar opcion valida");
                 break;
             case "OTROS":
                 //otr.setEnabled(true);
                 break;
 
             default:
-                throw new AssertionError();
+                        JOptionPane.showMessageDialog(null, "Seleccionar opcion valida");
+
         }
         agree.setEnabled(false);
         // TODO add your handling code here:
