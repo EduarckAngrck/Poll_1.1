@@ -776,5 +776,9 @@ public class mesa1 extends javax.swing.JFrame {
         ress.setEnabled(false);
 
     }
+    public void agree(String il){
+    
+    productos.addItem(il);
+    }
     // hola buenas noches
 }
