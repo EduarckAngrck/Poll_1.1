@@ -771,6 +771,8 @@ public class mesa1 extends javax.swing.JFrame {
         seg = 0;
         min = 0;
         hor = 0;
+        tot.setText("0");
+        total = 0;
         ress.setEnabled(false);
 
     }
