@@ -212,7 +212,9 @@ public class men_1 extends javax.swing.JFrame {
     }//GEN-LAST:event_AjustesActionPerformed
 
     private void CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarActionPerformed
-        System.exit(0);
+        Inicio_Pool inic = new Inicio_Pool();
+        this.setVisible(false);
+        inic.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_CerrarActionPerformed
 
