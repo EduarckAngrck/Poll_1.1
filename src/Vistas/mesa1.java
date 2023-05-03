@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.SwingConstants;
 //import javax.swing.JLabel;
 //import javax.swing.JPanel;
 //import javax.swing.JLabel;
@@ -777,7 +778,7 @@ public class mesa1 extends javax.swing.JFrame {
 
     }
     public void agree(String il){
-    
+        System.out.println(il);
     productos.addItem(il);
     }
     // hola buenas noches
