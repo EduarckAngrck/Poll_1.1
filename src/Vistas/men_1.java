@@ -197,22 +197,17 @@ public class men_1 extends javax.swing.JFrame {
 
     private void hpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hpActionPerformed
 
-        try {
-           File fil = new File("/pdf/Manual_de_Usuario.pdf");
-            if (fil.exists()) {
-                if (Desktop.isDesktopSupported()) {
-                    Desktop.getDesktop().open(fil);
-                }else{
-                JOptionPane.showMessageDialog(null, "El archivo no existe");
-                }
-            }else{
-                    JOptionPane.showMessageDialog(null, "El archivo no existe");
 
-            }
-            // TODO add your handling code here:
-        } catch (Exception e) {
-           e.printStackTrace();
-        }
+
+        File archivoPDF = new File("/pdf/Manual_de_Usuario.pdf");
+        try {
+            Desktop.getDesktop().open(archivoPDF);
+        } catch (IOException e) {
+            e.printStackTrace();
+        
+    
+}
+
     }//GEN-LAST:event_hpActionPerformed
 
     private void acActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acActionPerformed

@@ -218,8 +218,7 @@ public class ajustes extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        men_1 mes = new men_1();
-        mes.setVisible(true);
+        
         this.setVisible(false );        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
