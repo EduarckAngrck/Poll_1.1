@@ -29,6 +29,7 @@ public class mesa1 extends javax.swing.JFrame {
     public int hor = 0;
     private String dato;
     private String fechaa;
+    private String prod;
 
     /**
      * Creates new form mesa1
@@ -778,8 +779,9 @@ public class mesa1 extends javax.swing.JFrame {
 
     }
     public void agree(String il){
+        prod = il;
         System.out.println(il);
-    productos.addItem(il);
+    productos.addItem(prod);
     }
     // hola buenas noches
 }
