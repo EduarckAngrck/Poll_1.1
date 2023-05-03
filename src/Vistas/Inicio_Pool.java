@@ -130,7 +130,7 @@ public class Inicio_Pool extends javax.swing.JFrame {
     }//GEN-LAST:event_passActionPerformed
 
     private void iniciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciaActionPerformed
-        if (user.getText()== "admin" && pass.getText()== "12345") {
+        if (user.equals("admin") && pass.equals("User123")) {
             men_1 men = new men_1();
 men.setVisible(true);
 this.setVisible(false);
