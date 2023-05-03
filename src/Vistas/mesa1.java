@@ -373,46 +373,55 @@ public class mesa1 extends javax.swing.JFrame {
 
         double canti = Double.parseDouble(cantidad.getText());
         String t;
+        float pap, pal, ju, re, ho, ce,so;
+        
 
         switch (productos.getSelectedItem().toString()) {
             case "PAPAS":
-                total += (45 * canti);
+                pap = Float.parseFloat(p);
+                total += ( pap * canti);
                 t = String.valueOf(total);
                 prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
                 tot.setText(t);
                 break;
             case "REFRESCO":
-                total += (20 * canti);
+                re = Float.parseFloat(r);
+                total += (re * canti);
                 t = String.valueOf(total);
                 prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
                 tot.setText(t);
                 break;
             case "HOT DOG":
-                total += (20 * canti);
+                ho = Float.parseFloat(h);
+                total += (ho * canti);
                 t = String.valueOf(total);
                 prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
                 tot.setText(t);
                 break;
             case "SOPA INSTANTANEA":
-                total += (20 * canti);
+                so = Float.parseFloat(s);
+                total += (so * canti);
                 t = String.valueOf(total);
                 prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
                 tot.setText(t);
                 break;
             case "PALOMITAS":
-                total += (20 * canti);
+                pal = Float.parseFloat(pa);
+                total += (pal * canti);
                 t = String.valueOf(total);
                 prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
                 tot.setText(t);
                 break;
             case "JUGOS":
-                total += (20 * canti);
+                ju = Float.parseFloat(j);
+                total += (ju * canti);
                 t = String.valueOf(total);
                 prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
                 tot.setText(t);
                 break;
             case "CERVESA":
-                total += (20 * canti);
+               ce =  Float.parseFloat(c);
+                total += (ce * canti);
                 t = String.valueOf(total);
                 prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
                 tot.setText(t);
