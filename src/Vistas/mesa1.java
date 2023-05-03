@@ -4,6 +4,7 @@ package Vistas;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -13,6 +14,7 @@ import javax.swing.SwingConstants;
 //import javax.swing.JLabel;
 
 import javax.swing.Timer;
+import javax.swing.colorchooser.DefaultColorSelectionModel;
 
 /**
  *
@@ -30,6 +32,8 @@ public class mesa1 extends javax.swing.JFrame {
     private String dato;
     private String fechaa;
     private String prod;
+    DefaultComboBoxModel modeloCombo = new DefaultComboBoxModel();
+    
 
     /**
      * Creates new form mesa1
@@ -110,13 +114,13 @@ public class mesa1 extends javax.swing.JFrame {
 
         productos.setBackground(new java.awt.Color(102, 255, 102));
         productos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        productos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PAPAS", "REFRESCO", "SOPA INSTANTANEA", "PALOMITAS", "JUGOS", "CERVESA", "HOT DOG", " " }));
+        productos.setModel(modeloCombo);
         productos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productosActionPerformed(evt);
             }
         });
-        getContentPane().add(productos, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, -1, -1));
+        getContentPane().add(productos, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 200, -1));
 
         cantidad.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         cantidad.setText("0");
@@ -430,7 +434,7 @@ public class mesa1 extends javax.swing.JFrame {
 
     private void stoppActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stoppActionPerformed
         tie.stop();
-
+       ress.setEnabled(true);
         horas.setEnabled(true);
         inic.setEnabled(true);
         stopp.setEnabled(false);
@@ -781,8 +785,7 @@ public class mesa1 extends javax.swing.JFrame {
     public void agree(String il){
         prod = il;
         System.out.println(il);
-        System.out.println(prod);
-    productos.addItem(prod);
+       modeloCombo.addElement(prod);
     }
     // hola buenas noches
 }
