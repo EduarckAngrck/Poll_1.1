@@ -35,7 +35,7 @@ public class ajustes extends javax.swing.JFrame {
             txtId.getText(), txtPres.getText(), txtProd.getText()
         });
    mesa1 mes = new mesa1();
-        mes.agree(dtm.getValueAt(0, 2).toString());
+        mes.agree(txtProd.getText());
     }
 
     void eliminar() {
@@ -222,9 +222,7 @@ limpiar();        // TODO add your handling code here:
     }//GEN-LAST:event_txtPresKeyReleased
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-        
-        this.setVisible(false );        // TODO add your handling code here:
+    this.setVisible(false );        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
