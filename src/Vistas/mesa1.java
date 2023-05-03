@@ -108,7 +108,7 @@ public class mesa1 extends javax.swing.JFrame {
 
         productos.setBackground(new java.awt.Color(102, 255, 102));
         productos.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        productos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PAPAS", "REFRESCO", "SOPA INSTANTANEA ", "PALOMITAS ", "JUGOS", "CERVESA ", "HOT DOG ", " " }));
+        productos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PAPAS", "REFRESCO", "SOPA INSTANTANEA", "PALOMITAS", "JUGOS", "CERVESA", "HOT DOG", " " }));
         productos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productosActionPerformed(evt);
