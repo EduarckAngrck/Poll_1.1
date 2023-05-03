@@ -226,7 +226,7 @@ public class men_1 extends javax.swing.JFrame {
     private void AjustesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjustesActionPerformed
         ajustes aj = new ajustes();
         aj.setVisible(true);
-        this.setVisible(false);
+        //this.setVisible(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_AjustesActionPerformed
 
