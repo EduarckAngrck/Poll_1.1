@@ -304,6 +304,7 @@ public class men_1 extends javax.swing.JFrame {
             public void run() {
 
                 fechaa.setText("" + new Date());
+                
             }
         };
         tim.schedule(ti, 0, 1000);

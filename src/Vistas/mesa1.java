@@ -72,8 +72,8 @@ public class mesa1 extends javax.swing.JFrame {
         extra = new javax.swing.JTextField();
         horas = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         tiempo = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         mesaa = new javax.swing.JLabel();
         inic = new javax.swing.JButton();
         jbTotal = new javax.swing.JButton();
@@ -187,12 +187,12 @@ public class mesa1 extends javax.swing.JFrame {
         jLabel6.setText("Cantidad:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 100, 30));
 
+        tiempo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        getContentPane().add(tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, 240, 30));
+
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel7.setText("Cronometro");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, -1));
-
-        tiempo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        getContentPane().add(tiempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, 240, 30));
 
         mesaa.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         getContentPane().add(mesaa, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, 140, 40));
