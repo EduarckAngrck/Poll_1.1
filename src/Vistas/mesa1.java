@@ -91,6 +91,7 @@ public class mesa1 extends javax.swing.JFrame {
         prodMen = new javax.swing.JLabel();
         cerra = new javax.swing.JButton();
         ress = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         WALLP = new javax.swing.JLabel();
 
         jLabel4.setText("jLabel4");
@@ -293,6 +294,14 @@ public class mesa1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(ress, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, 180, 50));
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 140, -1, -1));
 
         WALLP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mesas.png"))); // NOI18N
         getContentPane().add(WALLP, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 890, 490));
@@ -498,6 +507,11 @@ public class mesa1 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ressActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+ modeloCombo.addElement(prod);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -545,6 +559,7 @@ public class mesa1 extends javax.swing.JFrame {
     private javax.swing.JLabel fech2;
     private javax.swing.JTextField horas;
     private javax.swing.JButton inic;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
@@ -784,7 +799,6 @@ public class mesa1 extends javax.swing.JFrame {
     }
     public void agree(String il){
        this.prod = il;
-        modeloCombo.addElement(prod);
         
       
     }
