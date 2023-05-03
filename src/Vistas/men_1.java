@@ -193,6 +193,9 @@ public class men_1 extends javax.swing.JFrame {
     }//GEN-LAST:event_acActionPerformed
 
     private void AjustesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjustesActionPerformed
+      ajustes ajus = new ajustes();
+      ajus.setVisible(true);
+      this.setVisible(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_AjustesActionPerformed
 
