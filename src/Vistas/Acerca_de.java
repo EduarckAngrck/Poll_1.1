@@ -38,6 +38,7 @@ public class Acerca_de extends javax.swing.JFrame {
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         FrogSoft.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/FrogSoft.png"))); // NOI18N
