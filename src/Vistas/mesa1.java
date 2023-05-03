@@ -783,9 +783,10 @@ public class mesa1 extends javax.swing.JFrame {
 
     }
     public void agree(String il){
-        prod = il;
-        System.out.println(il);
-       modeloCombo.addElement(prod);
+       this.prod = il;
+        modeloCombo.addElement(prod);
+        
+      
     }
     // hola buenas noches
 }
