@@ -152,7 +152,7 @@ this.setVisible(false);
     }//GEN-LAST:event_passKeyReleased
 
     private void CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarActionPerformed
-        // TODO add your handling code here:
+System.exit(0);        // TODO add your handling code here:
     }//GEN-LAST:event_CerrarActionPerformed
 
     /**
