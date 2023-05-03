@@ -85,7 +85,6 @@ public class men_1 extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Boton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Agregar.png"))); // NOI18N
         Boton.setBorder(null);
         Boton.setBorderPainted(false);
         Boton.setContentAreaFilled(false);
@@ -96,11 +95,14 @@ public class men_1 extends javax.swing.JFrame {
         });
         getContentPane().add(Boton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 120, 110));
 
-        Cerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cerrar-sesion.png"))); // NOI18N
         Cerrar.setContentAreaFilled(false);
+        Cerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CerrarActionPerformed(evt);
+            }
+        });
         getContentPane().add(Cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 530, 220, 60));
 
-        Ajustes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Setting.png"))); // NOI18N
         Ajustes.setToolTipText("");
         Ajustes.setContentAreaFilled(false);
         Ajustes.addActionListener(new java.awt.event.ActionListener() {
@@ -109,8 +111,6 @@ public class men_1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Ajustes, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 100, 120));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/lg.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 230, 170));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -123,7 +123,6 @@ public class men_1 extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 750, 480));
 
-        hp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Help.png"))); // NOI18N
         hp.setBorder(null);
         hp.setBorderPainted(false);
         hp.setContentAreaFilled(false);
@@ -134,7 +133,6 @@ public class men_1 extends javax.swing.JFrame {
         });
         getContentPane().add(hp, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, 110, 110));
 
-        ac.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Acerca de.png"))); // NOI18N
         ac.setBorder(null);
         ac.setBorderPainted(false);
         ac.setContentAreaFilled(false);
@@ -147,8 +145,6 @@ public class men_1 extends javax.swing.JFrame {
 
         fechaa.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         getContentPane().add(fechaa, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 70, 390, 40));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Mesa_Menu.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 1190, 670));
 
         pack();
@@ -199,6 +195,12 @@ public class men_1 extends javax.swing.JFrame {
     private void AjustesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjustesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_AjustesActionPerformed
+
+    private void CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarActionPerformed
+       Inicio_Pool inic = new Inicio_Pool();
+        this.setVisible(false);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CerrarActionPerformed
 
     /**
      * @param args the command line arguments
