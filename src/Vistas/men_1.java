@@ -1,6 +1,7 @@
 package Vistas;
 
 import java.awt.Color;
+import java.awt.Desktop;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
@@ -10,6 +11,7 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Image;
+import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 import java.util.Timer;
@@ -196,13 +198,20 @@ public class men_1 extends javax.swing.JFrame {
     private void hpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hpActionPerformed
 
         try {
-            String arch = "/pdf/Manual_de_Usuario.pdf";
-            ProcessBuilder p = new ProcessBuilder();
-            p.command("cmd.exe", "/c", arch);
-            p.start();
+           File fil = new File("/pdf/Manual_de_Usuario.pdf");
+            if (fil.exists()) {
+                if (Desktop.isDesktopSupported()) {
+                    Desktop.getDesktop().open(fil);
+                }else{
+                JOptionPane.showMessageDialog(null, "El archivo no existe");
+                }
+            }else{
+                    JOptionPane.showMessageDialog(null, "El archivo no existe");
+
+            }
             // TODO add your handling code here:
-        } catch (IOException ex) {
-            Logger.getLogger(men_1.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception e) {
+           e.printStackTrace();
         }
     }//GEN-LAST:event_hpActionPerformed
 
