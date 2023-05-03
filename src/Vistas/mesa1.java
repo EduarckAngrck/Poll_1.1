@@ -32,10 +32,14 @@ public class mesa1 extends javax.swing.JFrame {
     private String dato;
     private String fechaa;
     private String prod;
-       private String p , s, r,pa,j, c, h;
-    
+    private String p = "30";
+    private String s  = "30";
+    private String r = "30";
+    private String pa = "30";
+    private String j = "30";
+    private String c = "30";
+    private String h = "30";
     //DefaultComboBoxModel modeloCombo = new DefaultComboBoxModel();
-    
 
     /**
      * Creates new form mesa1
@@ -373,13 +377,12 @@ public class mesa1 extends javax.swing.JFrame {
 
         double canti = Double.parseDouble(cantidad.getText());
         String t;
-        float pap, pal, ju, re, ho, ce,so;
-        
+        float pap, pal, ju, re, ho, ce, so;
 
         switch (productos.getSelectedItem().toString()) {
             case "PAPAS":
                 pap = Float.parseFloat(p);
-                total += ( pap * canti);
+                total += (pap * canti);
                 t = String.valueOf(total);
                 prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
                 tot.setText(t);
@@ -420,18 +423,18 @@ public class mesa1 extends javax.swing.JFrame {
                 tot.setText(t);
                 break;
             case "CERVESA":
-               ce =  Float.parseFloat(c);
+                ce = Float.parseFloat(c);
                 total += (ce * canti);
                 t = String.valueOf(total);
                 prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
                 tot.setText(t);
                 break;
             case "OTROS":
-                 JOptionPane.showMessageDialog(null, "Seleccionar opcion valida");
+                JOptionPane.showMessageDialog(null, "Seleccionar opcion valida");
                 break;
 
             default:
-                        JOptionPane.showMessageDialog(null, "Seleccionar opcion valida");
+                JOptionPane.showMessageDialog(null, "Seleccionar opcion valida");
 
         }
         agree.setEnabled(false);
@@ -445,7 +448,7 @@ public class mesa1 extends javax.swing.JFrame {
 
     private void stoppActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stoppActionPerformed
         tie.stop();
-       ress.setEnabled(true);
+        ress.setEnabled(true);
         horas.setEnabled(true);
         inic.setEnabled(true);
         stopp.setEnabled(false);
@@ -505,7 +508,7 @@ public class mesa1 extends javax.swing.JFrame {
 
     private void ressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ressActionPerformed
 
-   reIni();
+        reIni();
         // TODO add your handling code here:
     }//GEN-LAST:event_ressActionPerformed
 
@@ -793,39 +796,39 @@ public class mesa1 extends javax.swing.JFrame {
         ress.setEnabled(false);
 
     }
+
     public void setP(String dato) {
-        this.p= dato;
-       
+        this.p = dato;
 
     }
+
     public void setR(String dato) {
         this.r = dato;
-        
 
     }
+
     public void setPa(String dato) {
         this.pa = dato;
-      
 
     }
+
     public void setH(String dato) {
         this.h = dato;
-        
 
     }
+
     public void setJ(String dato) {
         this.j = dato;
-       
 
     }
+
     public void setC(String dato) {
         this.c = dato;
-       
 
     }
+
     public void setS(String dato) {
         this.s = dato;
-        
 
     }
     /*public void agree(String il){
