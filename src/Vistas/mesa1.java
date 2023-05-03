@@ -403,11 +403,14 @@ public class mesa1 extends javax.swing.JFrame {
                 prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
                 tot.setText(t);
                 break;
-            case "":
-                 JOptionPane.showMessageDialog(null, "Seleccionar opcion valida");
+            case "CERVESA":
+                total += (20 * canti);
+                t = String.valueOf(total);
+                prodMen.setText("se agrego " + cantidad.getText() + " " + productos.getSelectedItem().toString());
+                tot.setText(t);
                 break;
             case "OTROS":
-                //otr.setEnabled(true);
+                 JOptionPane.showMessageDialog(null, "Seleccionar opcion valida");
                 break;
 
             default:
