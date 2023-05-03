@@ -7,6 +7,7 @@ package Vistas;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -129,9 +130,13 @@ public class Inicio_Pool extends javax.swing.JFrame {
     }//GEN-LAST:event_passActionPerformed
 
     private void iniciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciaActionPerformed
-men_1 men = new men_1();
+        if (user.getText()== "admin" && pass.getText()== "12345") {
+            men_1 men = new men_1();
 men.setVisible(true);
 this.setVisible(false);
+        }else{        JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecto");
+
+        }
 //hola carlos  
         // TODO add your handling code here:
     }//GEN-LAST:event_iniciaActionPerformed
