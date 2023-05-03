@@ -34,7 +34,8 @@ public class ajustes extends javax.swing.JFrame {
         dtm.addRow(new Object[]{
             txtId.getText(), txtPres.getText(), txtProd.getText()
         });
-
+   mesa1 mes = new mesa1();
+        mes.agree(dtm.getValueAt(0, 2).toString());
     }
 
     void eliminar() {
@@ -48,6 +49,7 @@ public class ajustes extends javax.swing.JFrame {
         dtm.setValueAt(txtId.getText(), fila, 0);
         dtm.setValueAt(txtPres.getText(), fila, 1);
         dtm.setValueAt(txtProd.getText(), fila, 2);
+        
     }
 
     void limpiar() {
@@ -195,14 +197,14 @@ public class ajustes extends javax.swing.JFrame {
     }//GEN-LAST:event_actualizarActionPerformed
 
     private void agregaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregaActionPerformed
-        mesa1 mes = new mesa1();
-        mes.agree(dtm.getValueAt(0, 2).toString());
+        
         agregar();    
         // TODO add your handling code here:
     }//GEN-LAST:event_agregaActionPerformed
 
     private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
-        // TODO add your handling code here:
+
+limpiar();        // TODO add your handling code here:
     }//GEN-LAST:event_limpiarActionPerformed
 
     private void eliminaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminaActionPerformed
