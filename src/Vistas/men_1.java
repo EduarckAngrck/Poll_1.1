@@ -10,19 +10,21 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Image;
+import java.io.IOException;
 import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.JOptionPane;
 //import java.awt.Toolkit;
 //import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-
 /**
  *
- * @author  eduarckangr ck
+ * @author eduarckangr ck
  */
 public class men_1 extends javax.swing.JFrame {
 
@@ -43,7 +45,7 @@ public class men_1 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         botones = new ArrayList<>();
         indice = 1;
-       /* ImageIcon imgen = new ImageIcon(getClass().getResource("/img/0.png"));
+        /* ImageIcon imgen = new ImageIcon(getClass().getResource("/img/0.png"));
         Icon fond = new ImageIcon(imgen.getImage().getScaledInstance(Boton.getWidth(), Boton.getHeight(), Image.SCALE_DEFAULT));
         Boton.setIcon(fond);
         ImageIcon imen = new ImageIcon(getClass().getResource("/img/Ajustes.png"));
@@ -56,7 +58,6 @@ public class men_1 extends javax.swing.JFrame {
         Icon a = new ImageIcon(im.getImage().getScaledInstance(ac.getWidth(), ac.getHeight(), Image.SCALE_DEFAULT));
         ac.setIcon(a);*/
         this.repaint();
-
 
     }
 
@@ -161,7 +162,7 @@ public class men_1 extends javax.swing.JFrame {
 
     private void BotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActionPerformed
         mesa1 mesa = new mesa1();
-        JButton boton = new JButton("" +indice);
+        JButton boton = new JButton("" + indice);
         panel.add(boton);
         botones.add(boton);
         boton.setForeground(Color.black);
@@ -171,7 +172,7 @@ public class men_1 extends javax.swing.JFrame {
 // jjjjj
 //boton.setBorder(null);
 //     ImageIcon imagen = new ImageIcon("m1.jpeg");
-       boton.setIcon(new ImageIcon(imagen.getScaledInstance(w, h, Image.SCALE_SMOOTH)));
+        boton.setIcon(new ImageIcon(imagen.getScaledInstance(w, h, Image.SCALE_SMOOTH)));
         boton.setFont(new Font("Tahoma", Font.BOLD, 30));
         boton.setBackground(Color.GREEN);
         indice++;
@@ -180,34 +181,43 @@ public class men_1 extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 mesa.setVisible(true);
-                
+
             }
         });
         mesa.setDato(boton.getText());
         tiempo();
         mesa.setFecha(fechaa.getText());
-       if (botones.size()> 23 ) {
+        if (botones.size() > 23) {
             Boton.setEnabled(false);
         }
 // TODO add your handling code here:
     }//GEN-LAST:event_BotonActionPerformed
 
     private void hpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hpActionPerformed
-        // TODO add your handling code here:
+
+        try {
+            String arch = "/pdf/Manual_de_Usuario.pdf";
+            ProcessBuilder p = new ProcessBuilder();
+            p.command("cmd.exe", "/c", arch);
+            p.start();
+            // TODO add your handling code here:
+        } catch (IOException ex) {
+            Logger.getLogger(men_1.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_hpActionPerformed
 
     private void acActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acActionPerformed
         //JOptionPane.showMessageDialog(null, "PollBall - WORKING PROGRESS \nEmpresa: FrogSoft \nCorreo electronico: FrogSoft2023@gmail.com \nNumero de contacto: 5971145270 \nDirección: Calle 5 de Mayo, Sin Número, 9C, Tlahuelilpan Centro");
-   Acerca_de ace = new Acerca_de();
-   ace.setVisible(true);
+        Acerca_de ace = new Acerca_de();
+        ace.setVisible(true);
 
 // TODO add your handling code here:
     }//GEN-LAST:event_acActionPerformed
 
     private void AjustesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AjustesActionPerformed
-     ajustes aj = new ajustes();
-     aj.setVisible(true);
-     this.setVisible(false);
+        ajustes aj = new ajustes();
+        aj.setVisible(true);
+        this.setVisible(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_AjustesActionPerformed
 
@@ -304,7 +314,7 @@ public class men_1 extends javax.swing.JFrame {
             public void run() {
 
                 fechaa.setText("" + new Date());
-                
+
             }
         };
         tim.schedule(ti, 0, 1000);
