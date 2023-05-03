@@ -196,7 +196,7 @@ public class ajustes extends javax.swing.JFrame {
 
     private void agregaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregaActionPerformed
         mesa1 mes = new mesa1();
-        mes.agree(dtm.getValueAt(0, 0).toString());
+        mes.agree(dtm.getValueAt(0, 2).toString());
         agregar();    
         // TODO add your handling code here:
     }//GEN-LAST:event_agregaActionPerformed
